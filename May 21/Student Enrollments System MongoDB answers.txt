@@ -1,0 +1,403 @@
+1-> Use a new database called campusdb
+
+Command:
+use campusdb
+
+Output:
+switched to db campusdb
+
+2->Create a collection enrollments and insert 4 student documents. Each
+document should include:
+name (string)
+studentId (number)
+courses (array of strings)
+address (sub-document with city , state )
+feesPaid (boolean)
+Ensure:
+At least 1 student is from "Delhi"
+At least 2 students are enrolled in "Python"
+At least 1 student has feesPaid: false
+
+Command:
+db.createCollection("enrollments")
+
+Output:
+{ ok: 1 }
+
+3-> Insert Student Documents into enrollments
+
+Command:
+db.enrollments.insertMany([
+{
+name: "Ananya Verma",
+studentId: 101,
+courses: ["Python", "Java"],
+address: { city: "Delhi", state: "Delhi" },
+feesPaid: true
+},
+{
+name: "Rohan Mehta",
+studentId: 102,
+courses: ["Python", "AI"],
+address: { city: "Bangalore", state: "Karnataka" },
+feesPaid: false
+},
+{
+name: "Sneha Kapoor",
+studentId: 103,
+courses: [],
+address: { city: "Hyderabad", state: "Telangana" },
+feesPaid: true
+},
+{
+name: "Imran Shaikh",
+studentId: 104,
+courses: ["Data Science", "Java"],
+address: { city: "Delhi", state: "Delhi" },
+feesPaid: false
+}
+])
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682d565ba481921ac11974dd'),
+    '1': ObjectId('682d565ba481921ac11974de'),
+    '2': ObjectId('682d565ba481921ac11974df'),
+    '3': ObjectId('682d565ba481921ac11974e0')
+  }
+}
+
+4-> Display all student records
+
+Command:
+db.enrollments.find()
+
+Output:
+{
+  _id: ObjectId('682d565ba481921ac11974dd'),
+  name: 'Ananya Verma',
+  studentId: 101,
+  courses: [
+    'Python',
+    'Java'
+  ],
+  address: {
+    city: 'Delhi',
+    state: 'Delhi'
+  },
+  feesPaid: true
+}
+{
+  _id: ObjectId('682d565ba481921ac11974de'),
+  name: 'Rohan Mehta',
+  studentId: 102,
+  courses: [
+    'Python',
+    'AI'
+  ],
+  address: {
+    city: 'Bangalore',
+    state: 'Karnataka'
+  },
+  feesPaid: false
+}
+{
+  _id: ObjectId('682d565ba481921ac11974df'),
+  name: 'Sneha Kapoor',
+  studentId: 103,
+  courses: [],
+  address: {
+    city: 'Hyderabad',
+    state: 'Telangana'
+  },
+  feesPaid: true
+}
+{
+  _id: ObjectId('682d565ba481921ac11974e0'),
+  name: 'Imran Shaikh',
+  studentId: 104,
+  courses: [
+    'Data Science',
+    'Java'
+  ],
+  address: {
+    city: 'Delhi',
+    state: 'Delhi'
+  },
+  feesPaid: false
+}
+
+5-> Find all students enrolled in "Python"
+
+Command:
+db.enrollments.find({courses:"Python"})
+
+Output:
+{
+  _id: ObjectId('682d565ba481921ac11974dd'),
+  name: 'Ananya Verma',
+  studentId: 101,
+  courses: [
+    'Python',
+    'Java'
+  ],
+  address: {
+    city: 'Delhi',
+    state: 'Delhi'
+  },
+  feesPaid: true
+}
+{
+  _id: ObjectId('682d565ba481921ac11974de'),
+  name: 'Rohan Mehta',
+  studentId: 102,
+  courses: [
+    'Python',
+    'AI'
+  ],
+  address: {
+    city: 'Bangalore',
+    state: 'Karnataka'
+  },
+  feesPaid: false
+}
+
+6-> Find students from Delhi who have not paid fees
+
+Command:
+db.enrollments.find({"address.state":"Delhi",feesPaid:false})
+
+Output:
+{
+  _id: ObjectId('682d565ba481921ac11974e0'),
+  name: 'Imran Shaikh',
+  studentId: 104,
+  courses: [
+    'Data Science',
+    'Java'
+  ],
+  address: {
+    city: 'Delhi',
+    state: 'Delhi'
+  },
+  feesPaid: false
+}
+
+7-> Add a new course "AI Fundamentals" to a specific student's courses
+array
+
+Command:
+db.enrollments.updateOne({"name":"Sneha Kapoor"},{$push:{"courses":"AI Fundamentals"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+8-> Update the city of a specific student to "Mumbai"
+
+Command:
+db.enrollments.updateOne({"name":"Sneha Kapoor"},{$set:{"address.city":"Mumbai","address.state":"Maharashtra"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+9-> Set feesPaid to true for all students from "Delhi"
+
+Command:
+db.enrollments.updateOne({"address.state":"Delhi"},{$set:{"feesPaid":true}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+
+10-> Remove "Java" course from any student who has it
+
+Command:
+db.enrollments.updateMany({"courses":"Java"},{$pull:{"courses":"Java"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+
+11-> Delete all students who have no courses enrolled (i.e., courses: [] )
+
+Command:
+db.enrollments.deleteMany({"courses":{$size:0}})
+
+Output:
+{
+  acknowledged: true,
+  deletedCount: 0
+}
+
+->collection data check 
+
+Command:
+db.enrollments.find()
+
+Output:
+{
+  _id: ObjectId('682d565ba481921ac11974dd'),
+  name: 'Ananya Verma',
+  studentId: 101,
+  courses: [
+    'Python'
+  ],
+  address: {
+    city: 'Delhi',
+    state: 'Delhi'
+  },
+  feesPaid: true
+}
+{
+  _id: ObjectId('682d565ba481921ac11974de'),
+  name: 'Rohan Mehta',
+  studentId: 102,
+  courses: [
+    'Python',
+    'AI'
+  ],
+  address: {
+    city: 'Bangalore',
+    state: 'Karnataka'
+  },
+  feesPaid: false
+}
+{
+  _id: ObjectId('682d565ba481921ac11974df'),
+  name: 'Sneha Kapoor',
+  studentId: 103,
+  courses: [
+    'AI Fundamentals'
+  ],
+  address: {
+    city: 'Mumbai',
+    state: 'Maharashtra'
+  },
+  feesPaid: true
+}
+{
+  _id: ObjectId('682d565ba481921ac11974e0'),
+  name: 'Imran Shaikh',
+  studentId: 104,
+  courses: [
+    'Data Science'
+  ],
+  address: {
+    city: 'Delhi',
+    state: 'Delhi'
+  },
+  feesPaid: false
+}
+
+--> adding an empty course 
+
+Command:
+db.enrollments.insertOne({
+  name: 'empty course test',
+  studentId: 104,
+  courses: [
+  ],
+  address: {
+    city: 'Delhi',
+    state: 'Delhi'
+  },
+  feesPaid: false
+})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: ObjectId('682d57fea481921ac11974e1')
+}
+
+
+Command:
+db.enrollments.deleteMany({"courses":{$size:0}})
+
+Output:
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+--> deletion check 
+
+Command:
+db.enrollments.find()
+
+Output:
+{
+  _id: ObjectId('682d565ba481921ac11974dd'),
+  name: 'Ananya Verma',
+  studentId: 101,
+  courses: [
+    'Python'
+  ],
+  address: {
+    city: 'Delhi',
+    state: 'Delhi'
+  },
+  feesPaid: true
+}
+{
+  _id: ObjectId('682d565ba481921ac11974de'),
+  name: 'Rohan Mehta',
+  studentId: 102,
+  courses: [
+    'Python',
+    'AI'
+  ],
+  address: {
+    city: 'Bangalore',
+    state: 'Karnataka'
+  },
+  feesPaid: false
+}
+{
+  _id: ObjectId('682d565ba481921ac11974df'),
+  name: 'Sneha Kapoor',
+  studentId: 103,
+  courses: [
+    'AI Fundamentals'
+  ],
+  address: {
+    city: 'Mumbai',
+    state: 'Maharashtra'
+  },
+  feesPaid: true
+}
+{
+  _id: ObjectId('682d565ba481921ac11974e0'),
+  name: 'Imran Shaikh',
+  studentId: 104,
+  courses: [
+    'Data Science'
+  ],
+  address: {
+    city: 'Delhi',
+    state: 'Delhi'
+  },
+  feesPaid: false
+}
