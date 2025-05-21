@@ -1,0 +1,131 @@
+Command:
+use bugtracker
+
+Output:
+switched to db bugtracker
+
+Command:
+db.createCollection("bugs")
+
+Output:
+{ ok: 1 }
+
+Command:
+db.bugs.insertMany([
+  {
+    title: "Login page not loading",
+    reportedBy: "Alice",
+    status: "Open",
+    priority: "High",
+    createdAt: new Date("2025-05-20T10:00:00Z")
+  },
+  {
+    title: "Typo in footer text",
+    reportedBy: "Bob",
+    status: "Closed",
+    priority: "Low",
+    createdAt: new Date("2025-05-18T14:30:00Z")
+  },
+  {
+    title: "Dashboard graphs not updating",
+    reportedBy: "Test User",
+    status: "In Progress",
+    priority: "Medium",
+    createdAt: new Date("2025-05-19T09:15:00Z")
+  }
+])
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682db4ecc8973766ff0e7e9e'),
+    '1': ObjectId('682db4ecc8973766ff0e7e9f'),
+    '2': ObjectId('682db4ecc8973766ff0e7ea0')
+  }
+}
+
+Command:
+db.bugs.find({"status":"Open","priority":"High"})
+
+Output:
+{
+  _id: ObjectId('682db4ecc8973766ff0e7e9e'),
+  title: 'Login page not loading',
+  reportedBy: 'Alice',
+  status: 'Open',
+  priority: 'High',
+  createdAt: 2025-05-20T10:00:00.000Z
+}
+
+
+Command:
+db.bugs.find()
+
+Output:
+{
+  _id: ObjectId('682db4ecc8973766ff0e7e9e'),
+  title: 'Login page not loading',
+  reportedBy: 'Alice',
+  status: 'Open',
+  priority: 'High',
+  createdAt: 2025-05-20T10:00:00.000Z
+}
+{
+  _id: ObjectId('682db4ecc8973766ff0e7e9f'),
+  title: 'Typo in footer text',
+  reportedBy: 'Bob',
+  status: 'Closed',
+  priority: 'Low',
+  createdAt: 2025-05-18T14:30:00.000Z
+}
+{
+  _id: ObjectId('682db4ecc8973766ff0e7ea0'),
+  title: 'Dashboard graphs not updating',
+  reportedBy: 'Test User',
+  status: 'In Progress',
+  priority: 'Medium',
+  createdAt: 2025-05-19T09:15:00.000Z
+}
+
+Command:
+db.bugs.updateOne({"title":"Dashboard graphs not updating"},{$set:{"status":"Closed"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+db.bugs.deleteOne({"reportedBy":"Test User"})
+
+Output:
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+Command:
+db.bugs.find()
+
+Output:
+{
+  _id: ObjectId('682db4ecc8973766ff0e7e9e'),
+  title: 'Login page not loading',
+  reportedBy: 'Alice',
+  status: 'Open',
+  priority: 'High',
+  createdAt: 2025-05-20T10:00:00.000Z
+}
+{
+  _id: ObjectId('682db4ecc8973766ff0e7e9f'),
+  title: 'Typo in footer text',
+  reportedBy: 'Bob',
+  status: 'Closed',
+  priority: 'Low',
+  createdAt: 2025-05-18T14:30:00.000Z
+}
