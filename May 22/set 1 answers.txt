@@ -1,0 +1,756 @@
+Section 1: Working with Schemas & Data Types
+
+1-> Create a database named trainingdb 
+
+Command:
+test> use trainingdb
+
+Output:
+switched to db trainingdb
+
+
+2-> Create a collection employees with
+
+    documents that include:
+    name (string)
+    age (number)
+    isManager (boolean)
+    skills (array of strings)
+    joiningDate (date)
+    profile (sub-document with linkedin and portfolio )
+
+Command:
+trainingdb> db.createCollection("employees")
+
+Output:
+{ ok: 1 }
+
+3-> Insert 4 employees with varying skill sets and joining dates
+
+Command:
+trainingdb> db.employees.insertMany([
+...   {
+...     name: "Alice Johnson",
+...     age: 29,
+...     isManager: false,
+...     skills: ["JavaScript", "React", "Node.js"],
+...     joiningDate: new Date("2021-06-15"),
+...     profile: {
+...       linkedin: "https://linkedin.com/in/alicejohnson",
+...       portfolio: "https://alice.dev"
+...     }
+...   },
+...   {
+...     name: "Brian Lee",
+...     age: 35,
+...     isManager: true,
+...     skills: ["Project Management", "Agile", "Scrum"],
+...     joiningDate: new Date("2020-01-10"),
+...     profile: {
+...       linkedin: "https://linkedin.com/in/brianlee",
+...       portfolio: "https://brianpm.io"
+...     }
+...   },
+...   {
+...     name: "Clara Gomez",
+...     age: 26,
+...     isManager: false,
+...     skills: ["Python", "Django", "Machine Learning"],
+...     joiningDate: new Date("2023-03-01"),
+...     profile: {
+...       linkedin: "https://linkedin.com/in/claragomez",
+...       portfolio: "https://clarag.dev"
+...     }
+...   },
+...   {
+...     name: "David Smith",
+...     age: 41,
+...     isManager: true,
+...     skills: ["Java", "Spring", "System Design"],
+...     joiningDate: new Date("2018-09-25"),
+...     profile: {
+...       linkedin: "https://linkedin.com/in/davidsmith",
+...       portfolio: "https://davids.tech"
+...     }
+...   }
+... ]);
+...
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682f1b98b07230838b6c4bd0'),
+    '1': ObjectId('682f1b98b07230838b6c4bd1'),
+    '2': ObjectId('682f1b98b07230838b6c4bd2'),
+    '3': ObjectId('682f1b98b07230838b6c4bd3')
+  }
+}
+
+
+4-> Query all employees who:
+    Have more than 2 skills
+    Joined after a specific date
+
+Command:
+trainingdb> db.employees.find({$and:[{"skills.2":{$exists:true}},{"joiningDate":{$gt:new Date("2021-01-01")}}]})
+
+Output:
+[
+  {
+    _id: ObjectId('682f1b98b07230838b6c4bd0'),
+    name: 'Alice Johnson',
+    age: 29,
+    isManager: false,
+    skills: [ 'JavaScript', 'React', 'Node.js' ],
+    joiningDate: ISODate('2021-06-15T00:00:00.000Z'),
+    profile: {
+      linkedin: 'https://linkedin.com/in/alicejohnson',
+      portfolio: 'https://alice.dev'
+    }
+  },
+  {
+    _id: ObjectId('682f1b98b07230838b6c4bd2'),
+    name: 'Clara Gomez',
+    age: 26,
+    isManager: false,
+    skills: [ 'Python', 'Django', 'Machine Learning' ],
+    joiningDate: ISODate('2023-03-01T00:00:00.000Z'),
+    profile: {
+      linkedin: 'https://linkedin.com/in/claragomez',
+      portfolio: 'https://clarag.dev'
+    }
+  }
+]
+
+
+5-> Add a new field rating (float) to one employee 
+
+Command:
+trainingdb> db.employees.updateOne({_id:ObjectId('682f1b98b07230838b6c4bd0')},{$set:{"rating":5.0}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+trainingdb> db.employees.find()
+
+Output:
+[
+  {
+    _id: ObjectId('682f1b98b07230838b6c4bd0'),
+    name: 'Alice Johnson',
+    age: 29,
+    isManager: false,
+    skills: [ 'JavaScript', 'React', 'Node.js' ],
+    joiningDate: ISODate('2021-06-15T00:00:00.000Z'),
+    profile: {
+      linkedin: 'https://linkedin.com/in/alicejohnson',
+      portfolio: 'https://alice.dev'
+    },
+    rating: 5
+  },
+  {
+    _id: ObjectId('682f1b98b07230838b6c4bd1'),
+    name: 'Brian Lee',
+    age: 35,
+    isManager: true,
+    skills: [ 'Project Management', 'Agile', 'Scrum' ],
+    joiningDate: ISODate('2020-01-10T00:00:00.000Z'),
+    profile: {
+      linkedin: 'https://linkedin.com/in/brianlee',
+      portfolio: 'https://brianpm.io'
+    }
+  },
+  {
+    _id: ObjectId('682f1b98b07230838b6c4bd2'),
+    name: 'Clara Gomez',
+    age: 26,
+    isManager: false,
+    skills: [ 'Python', 'Django', 'Machine Learning' ],
+    joiningDate: ISODate('2023-03-01T00:00:00.000Z'),
+    profile: {
+      linkedin: 'https://linkedin.com/in/claragomez',
+      portfolio: 'https://clarag.dev'
+    }
+  },
+  {
+    _id: ObjectId('682f1b98b07230838b6c4bd3'),
+    name: 'David Smith',
+    age: 41,
+    isManager: true,
+    skills: [ 'Java', 'Spring', 'System Design' ],
+    joiningDate: ISODate('2018-09-25T00:00:00.000Z'),
+    profile: {
+      linkedin: 'https://linkedin.com/in/davidsmith',
+      portfolio: 'https://davids.tech'
+    }
+  }
+]
+
+6-> Find all employees with rating
+
+Command:
+trainingdb> db.employees.find({rating:{$exists:true}})
+
+Output:
+[
+  {
+    _id: ObjectId('682f1b98b07230838b6c4bd0'),
+    name: 'Alice Johnson',
+    age: 29,
+    isManager: false,
+    skills: [ 'JavaScript', 'React', 'Node.js' ],
+    joiningDate: ISODate('2021-06-15T00:00:00.000Z'),
+    profile: {
+      linkedin: 'https://linkedin.com/in/alicejohnson',
+      portfolio: 'https://alice.dev'
+    },
+    rating: 5
+  }
+]
+
+
+field of type double 
+7-> Exclude the _id field in a query result and show only name and skills
+
+Command:
+trainingdb> db.employees.find({},{_id:false,name:true,skills:true})
+
+Output:
+[
+  {
+    name: 'Alice Johnson',
+    skills: [ 'JavaScript', 'React', 'Node.js' ]
+  },
+  {
+    name: 'Brian Lee',
+    skills: [ 'Project Management', 'Agile', 'Scrum' ]
+  },
+  {
+    name: 'Clara Gomez',
+    skills: [ 'Python', 'Django', 'Machine Learning' ]
+  },
+  {
+    name: 'David Smith',
+    skills: [ 'Java', 'Spring', 'System Design' ]
+  }
+]
+
+
+Section 2: One-to-One (Embedded)
+
+
+1-> Create a database schooldb 
+
+Command:
+trainingdb> use schooldb
+
+Output:
+switched to db schooldb
+
+2-> In the students collection, insert 3 student documents with:
+    Embedded guardian sub-document ( name , phone , relation )
+
+Command:
+schooldb> db.createCollection("students")
+
+Output:
+{ ok: 1 }
+
+Command:
+schooldb> db.students.insertMany([
+...   {
+...     name: "Emma Wilson",
+...     age: 15,
+...     grade: "10th",
+...     guardian: {
+...       name: "Sarah Wilson",
+...       phone: "9876543210",
+...       relation: "Mother"
+...     }
+...   },
+...   {
+...     name: "Liam Parker",
+...     age: 16,
+...     grade: "11th",
+...     guardian: {
+...       name: "John Parker",
+...       phone: "9871234567",
+...       relation: "Father"
+...     }
+...   },
+...   {
+...     name: "Olivia Brown",
+...     age: 14,
+...     grade: "9th",
+...     guardian: {
+...       name: "Emily Brown",
+...       phone: "9867894321",
+...       relation: "Sister"
+...     }
+...   }
+... ]);
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682f2214b07230838b6c4bd4'),
+    '1': ObjectId('682f2214b07230838b6c4bd5'),
+    '2': ObjectId('682f2214b07230838b6c4bd6')
+  }
+}
+
+3-> Query students where the guardian is their "Mother"
+
+Command:
+schooldb> db.students.find({"guardian.relation":"Mother"})
+
+Output:
+[
+  {
+    _id: ObjectId('682f2214b07230838b6c4bd4'),
+    name: 'Emma Wilson',
+    age: 15,
+    grade: '10th',
+    guardian: { name: 'Sarah Wilson', phone: '9876543210', relation: 'Mother' }
+  }
+]
+
+4-> Update the guardian's phone number for a specific student
+
+Command:
+schooldb> db.students.updateOne({name: "Emma Wilson"},{$set:{"guardian.phone":"1234567890"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+schooldb> db.students.find()
+
+Output:
+[
+  {
+    _id: ObjectId('682f2214b07230838b6c4bd4'),
+    name: 'Emma Wilson',
+    age: 15,
+    grade: '10th',
+    guardian: { name: 'Sarah Wilson', phone: '1234567890', relation: 'Mother' }
+  },
+  {
+    _id: ObjectId('682f2214b07230838b6c4bd5'),
+    name: 'Liam Parker',
+    age: 16,
+    grade: '11th',
+    guardian: { name: 'John Parker', phone: '9871234567', relation: 'Father' }
+  },
+  {
+    _id: ObjectId('682f2214b07230838b6c4bd6'),
+    name: 'Olivia Brown',
+    age: 14,
+    grade: '9th',
+    guardian: { name: 'Emily Brown', phone: '9867894321', relation: 'Sister' }
+  }
+]
+
+Section 3: One-to-Many (Embedded)
+
+1-> In the same schooldb , create a teachers collection
+
+Command:
+schooldb> db.createCollection("teachers")
+
+Output:
+{ ok: 1 }
+
+
+2-> Insert documents where each teacher has an embedded array of classes they teach (e.g., ["Math", "Physics"] )
+
+Command:
+schooldb> db.teachers.insertMany([
+...   {
+...     name: "Mr. Alan Cooper",
+...     age: 45,
+...     subjectSpecialization: "Science",
+...     classes: ["Physics", "Chemistry"]
+...   },
+...   {
+...     name: "Ms. Rachel Green",
+...     age: 38,
+...     subjectSpecialization: "Mathematics",
+...     classes: ["Math", "Geometry", "Calculus"]
+...   },
+...   {
+...     name: "Dr. Susan Hill",
+...     age: 50,
+...     subjectSpecialization: "Biology",
+...     classes: ["Biology", "Environmental Science"]
+...   },
+...   {
+...     name: "Mr. Daniel Brooks",
+...     age: 32,
+...     subjectSpecialization: "Technology",
+...     classes: ["AI", "Machine Learning"]
+...   }
+... ]);
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682f25e7b07230838b6c4bdd'),
+    '1': ObjectId('682f25e7b07230838b6c4bde'),
+    '2': ObjectId('682f25e7b07230838b6c4bdf'),
+    '3': ObjectId('682f25e7b07230838b6c4be0')
+  }
+}
+
+3-> Query teachers who teach "Physics"
+
+Command:
+schooldb> db.teachers.find({classes:{$in:["Physics"]}})
+
+Output:
+[
+  {
+    _id: ObjectId('682f25e7b07230838b6c4bdd'),
+    name: 'Mr. Alan Cooper',
+    age: 45,
+    subjectSpecialization: 'Science',
+    classes: [ 'Physics', 'Chemistry' ]
+  }
+]
+
+4->Add a new class "Robotics" to a specific teacher's classes array
+
+Command:
+schooldb> db.teachers.updateOne({name: "Mr. Daniel Brooks"},{$push:{classes:"Robotics"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+schooldb> db.teachers.find()
+
+Output:
+[
+  {
+    _id: ObjectId('682f25e7b07230838b6c4bdd'),
+    name: 'Mr. Alan Cooper',
+    age: 45,
+    subjectSpecialization: 'Science',
+    classes: [ 'Physics', 'Chemistry' ]
+  },
+  {
+    _id: ObjectId('682f25e7b07230838b6c4bde'),
+    name: 'Ms. Rachel Green',
+    age: 38,
+    subjectSpecialization: 'Mathematics',
+    classes: [ 'Math', 'Geometry', 'Calculus' ]
+  },
+  {
+    _id: ObjectId('682f25e7b07230838b6c4bdf'),
+    name: 'Dr. Susan Hill',
+    age: 50,
+    subjectSpecialization: 'Biology',
+    classes: [ 'Biology', 'Environmental Science' ]
+  },
+  {
+    _id: ObjectId('682f25e7b07230838b6c4be0'),
+    name: 'Mr. Daniel Brooks',
+    age: 32,
+    subjectSpecialization: 'Technology',
+    classes: [ 'AI', 'Machine Learning', 'Robotics' ]
+  }
+]
+
+5-> Remove "Math" from one teacher’s class list
+
+Command:
+schooldb> db.teachers.updateOne({name: "Ms. Rachel Green"},{$pull:{classes:"Math"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+schooldb> db.teachers.find()
+
+Output:
+[
+  {
+    _id: ObjectId('682f25e7b07230838b6c4bdd'),
+    name: 'Mr. Alan Cooper',
+    age: 45,
+    subjectSpecialization: 'Science',
+    classes: [ 'Physics', 'Chemistry' ]
+  },
+  {
+    _id: ObjectId('682f25e7b07230838b6c4bde'),
+    name: 'Ms. Rachel Green',
+    age: 38,
+    subjectSpecialization: 'Mathematics',
+    classes: [ 'Geometry', 'Calculus' ]
+  },
+  {
+    _id: ObjectId('682f25e7b07230838b6c4bdf'),
+    name: 'Dr. Susan Hill',
+    age: 50,
+    subjectSpecialization: 'Biology',
+    classes: [ 'Biology', 'Environmental Science' ]
+  },
+  {
+    _id: ObjectId('682f25e7b07230838b6c4be0'),
+    name: 'Mr. Daniel Brooks',
+    age: 32,
+    subjectSpecialization: 'Technology',
+    classes: [ 'AI', 'Machine Learning', 'Robotics' ]
+  }
+]
+
+
+Section 4: One-to-Many (Referenced)
+
+
+1-> Create a database academia
+
+Command:
+use academia
+
+Output:
+switched to db academia
+
+
+2-> Insert documents into courses with fields:
+
+    _id
+    title
+    credits
+
+Command:
+academia> db.createCollection("courses")
+
+Output:
+{ ok: 1 }
+
+
+Command:
+academia> db.courses.insertMany([
+...   {
+...
+...     title: "Introduction to Computer Science",
+...     credits: 4
+...   },
+...   {
+...
+...     title: "Calculus I",
+...     credits: 3
+...   },
+...   {
+...
+...     title: "English Literature",
+...     credits: 2
+...   }
+... ]);
+
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682f2930b07230838b6c4be1'),
+    '1': ObjectId('682f2930b07230838b6c4be2'),
+    '2': ObjectId('682f2930b07230838b6c4be3')
+  }
+}
+
+3-> Insert documents into students with fields:
+
+    name
+    enrolledCourse (store ObjectId reference to a course)
+
+Command:
+academia> db.createCollection("students")
+
+Output:
+{ ok: 1 }
+
+
+Command:
+academia> db.students.insertMany([
+...   {
+...     name: "John Doe",
+...     enrolledCourse:  ObjectId('682f2930b07230838b6c4be1')
+...   },
+...   {
+...     name: "Jane Smith",
+...     enrolledCourse: ObjectId('682f2930b07230838b6c4be2')
+...   },
+...   {
+...     name: "Alice Johnson",
+...     enrolledCourse: ObjectId('682f2930b07230838b6c4be3')
+...   }
+... ]);
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682f299db07230838b6c4be4'),
+    '1': ObjectId('682f299db07230838b6c4be5'),
+    '2': ObjectId('682f299db07230838b6c4be6')
+  }
+}
+
+4-> Query students who are enrolled in a specific course (by ObjectId )
+
+Command:
+academia> db.students.find({enrolledCourse:ObjectId('682f2930b07230838b6c4be1')})
+
+Output:
+[
+  {
+    _id: ObjectId('682f299db07230838b6c4be4'),
+    name: 'John Doe',
+    enrolledCourse: ObjectId('682f2930b07230838b6c4be1')
+  }
+]
+
+
+5-> Query the course details separately using the referenced _id
+
+Command:
+academia> db.students.aggregate([{$lookup:{from:"courses",localField:"enrolledCourse",foreignField:"_id",as:"title"}},{$project:{"title._id":false}}])
+
+Output:
+[
+  {
+    _id: ObjectId('682f299db07230838b6c4be4'),
+    name: 'John Doe',
+    enrolledCourse: ObjectId('682f2930b07230838b6c4be1'),
+    title: [ { title: 'Introduction to Computer Science', credits: 4 } ]
+  },
+  {
+    _id: ObjectId('682f299db07230838b6c4be5'),
+    name: 'Jane Smith',
+    enrolledCourse: ObjectId('682f2930b07230838b6c4be2'),
+    title: [ { title: 'Calculus I', credits: 3 } ]
+  },
+  {
+    _id: ObjectId('682f299db07230838b6c4be6'),
+    name: 'Alice Johnson',
+    enrolledCourse: ObjectId('682f2930b07230838b6c4be3'),
+    title: [ { title: 'English Literature', credits: 2 } ]
+  }
+]
+
+
+Section 5: $lookup (Join in Aggregation)
+
+1-> Use the academia database 
+
+Command:
+use academia
+
+Output:
+switched to db academia
+
+2-> Use $lookup to join students with courses based on enrolledCourse
+
+Command:
+academia> db.students.aggregate([{$lookup:{from:"courses",localField:"enrolledCourse",foreignField:"_id",as:"title"}}])
+
+Output:
+[
+  {
+    _id: ObjectId('682f299db07230838b6c4be4'),
+    name: 'John Doe',
+    enrolledCourse: ObjectId('682f2930b07230838b6c4be1'),
+    title: [
+      {
+        _id: ObjectId('682f2930b07230838b6c4be1'),
+        title: 'Introduction to Computer Science',
+        credits: 4
+      }
+    ]
+  },
+  {
+    _id: ObjectId('682f299db07230838b6c4be5'),
+    name: 'Jane Smith',
+    enrolledCourse: ObjectId('682f2930b07230838b6c4be2'),
+    title: [
+      {
+        _id: ObjectId('682f2930b07230838b6c4be2'),
+        title: 'Calculus I',
+        credits: 3
+      }
+    ]
+  },
+  {
+    _id: ObjectId('682f299db07230838b6c4be6'),
+    name: 'Alice Johnson',
+    enrolledCourse: ObjectId('682f2930b07230838b6c4be3'),
+    title: [
+      {
+        _id: ObjectId('682f2930b07230838b6c4be3'),
+        title: 'English Literature',
+        credits: 2
+      }
+    ]
+  }
+]
+
+
+
+3->Show only student name , and course title in the output using $project
+
+Command:
+academia> db.students.aggregate([{$lookup:{from:"courses",localField:"enrolledCourse",foreignField:"_id",as:"title"}},{$project:{"name":true,"title.title":true,_id:false}}])
+
+Output:
+[
+  {
+    name: 'John Doe',
+    title: [ { title: 'Introduction to Computer Science' } ]
+  },
+  { name: 'Jane Smith', title: [ { title: 'Calculus I' } ] },
+  { name: 'Alice Johnson', title: [ { title: 'English Literature' } ] }
+]
+
+
+4-> Add a $match after $lookup to get only students enrolled in "Machine Learning"
+course
+
+Command:
+
+academia> db.students.aggregate([{ $lookup: { from: "courses", localField: "enrolledCourse", foreignField: "_id", as: "title" } }, { $project: { "name": true, "title.title": true, _id: false }},{$match:{"title.title": 'Calculus I'}}])
+
+Output:
+[
+  { name: 'Jane Smith', title: [ { title: 'Calculus I' } ] }
+]
+academia>
