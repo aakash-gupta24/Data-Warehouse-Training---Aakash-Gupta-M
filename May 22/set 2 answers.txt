@@ -1,0 +1,776 @@
+Section 1: Basic Document Modeling & Insertion
+
+1-> Create a database called taskmanager
+
+Command:
+test> use taskmanager
+
+Output:
+switched to db taskmanager
+
+
+2-> Insert 3 users into a users collection. Each should have:
+    name (string)
+    email (string)
+    role (either "admin", "manager", or "developer")
+    active (boolean)
+
+Command:
+taskmanager> db.createCollection("users")
+
+Output:
+{ ok: 1 }
+
+Command:
+taskmanager> db.users.insertMany([
+...   {
+...     name: 'Alice Johnson',
+...     email: 'alice@example.com',
+...     role: ['admin'],
+...     active: true
+...   },
+...   {
+...     name: 'Bob Smith',
+...     email: 'bob@example.com',
+...     role: ['developer'],
+...     active: true
+...   },
+...   {
+...     name: 'Carol Davis',
+...     email: 'carol@example.com',
+...     role: ['manager'],
+...     active: false
+...   }
+... ])
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682ffd4046e2e0e9d76c4bd0'),
+    '1': ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    '2': ObjectId('682ffd4046e2e0e9d76c4bd2')
+  }
+}
+
+
+3-> Insert 2 projects into a projects collection:
+    title, description, startDate, status (e.g. "active", "completed")
+    Embed a createdBy sub-document containing the user’s _id, name
+
+Command:
+taskmanager> db.createCollection("projects")
+
+Output:
+{ ok: 1 }
+
+Command:
+taskmanager> db.projects.insertMany([
+...   {
+...     title: "Project Phoenix",
+...     description: "Next-gen platform development",
+...     startDate: new Date(),
+...     status: "active",
+...     progress: 30,
+...     createdBy: {
+...       _id: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+...       name: "Alice Johnson"
+...     }
+...   },
+...   {
+...     title: "Legacy Migration",
+...     description: "Migrate old systems to cloud",
+...     startDate: new Date("2024-01-10"),
+...     status: "completed",
+...     progress: 100,
+...     createdBy: {
+...       _id: ObjectId('682ffd4046e2e0e9d76c4bd2'),
+...       name: "Carol Davis"
+...     }
+...   }
+... ]);
+...
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    '1': ObjectId('682ffdca46e2e0e9d76c4bd4')
+  }
+}
+
+
+4-> Insert 5 tasks into a tasks collection:
+    Fields: title, assignedTo (user _id), projectId, priority, dueDate, status
+
+Command:
+taskmanager> db.createCollection("tasks")
+
+Output:
+{ ok: 1 }
+
+Command:
+taskmanager> db.tasks.insertMany([
+...   {
+...     title: "Set up CI/CD pipeline",
+...     assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+...     projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+...     priority: "high",
+...     dueDate: new Date("2025-05-25"),
+...     status: "in progress"
+...   },
+...   {
+...     title: "Cloud infra setup",
+...     assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+...     projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+...     priority: "medium",
+...     dueDate: new Date("2025-06-01"),
+...     status: "not started"
+...   },
+...   {
+...     title: "Database migration",
+...     assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd2'),
+...     projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+...     priority: "high",
+...     dueDate: new Date("2025-05-30"),
+...     status: "not started"
+...   },
+...   {
+...     title: "Frontend redesign",
+...     assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+...     projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+...     priority: "low",
+...     dueDate: new Date("2025-07-15"),
+...     status: "completed"
+...   },
+...   {
+...     title: "Bug fixes",
+...     assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+...     projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+...     priority: "high",
+...     dueDate: new Date("2025-05-23"),
+...     status: "in progress"
+...   }
+... ]);
+
+Output:
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('682fff5246e2e0e9d76c4bd5'),
+    '1': ObjectId('682fff5246e2e0e9d76c4bd6'),
+    '2': ObjectId('682fff5246e2e0e9d76c4bd7'),
+    '3': ObjectId('682fff5246e2e0e9d76c4bd8'),
+    '4': ObjectId('682fff5246e2e0e9d76c4bd9')
+  }
+}
+
+Section 2: Filtering & Querying
+
+
+5-> Find all tasks with priority "high" that are not completed
+
+
+Command:
+taskmanager> db.tasks.find({status:{$nin:["completed"]},{priority:"high"}})
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd5'),
+    title: 'Set up CI/CD pipeline',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-25T00:00:00.000Z'),
+    status: 'in progress'
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd6'),
+    title: 'Cloud infra setup',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+    priority: 'medium',
+    dueDate: ISODate('2025-06-01T00:00:00.000Z'),
+    status: 'not started'
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd7'),
+    title: 'Database migration',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd2'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-30T00:00:00.000Z'),
+    status: 'not started'
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd9'),
+    title: 'Bug fixes',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-23T00:00:00.000Z'),
+    status: 'in progress'
+  }
+]
+
+
+6-> Query all active users with role "developer"
+
+Command:
+taskmanager> db.users.find({$and:[{active:true},{role:"developer"}]})
+
+Output:
+[
+  {
+    _id: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    name: 'Bob Smith',
+    email: 'bob@example.com',
+    role: 'developer',
+    active: true
+  }
+]
+
+
+7-> Find all tasks assigned to a specific user (by ObjectId)
+
+Command:
+taskmanager> db.tasks.find({assignedTo:ObjectId('682ffd4046e2e0e9d76c4bd1')})
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd5'),
+    title: 'Set up CI/CD pipeline',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-25T00:00:00.000Z'),
+    status: 'in progress'
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd6'),
+    title: 'Cloud infra setup',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+    priority: 'medium',
+    dueDate: ISODate('2025-06-01T00:00:00.000Z'),
+    status: 'not started'
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd8'),
+    title: 'Frontend redesign',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'low',
+    dueDate: ISODate('2025-07-15T00:00:00.000Z'),
+    status: 'completed'
+  }
+]
+
+
+8-> Find all projects started in the last 30 days
+
+Command:
+taskmanager> db.projects.find({startDate: {$gte: new Date(new Date().setDate(new Date().getDate() - 30))}});
+
+Output:
+[
+  {
+    _id: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    title: 'Project Phoenix',
+    description: 'Next-gen platform development',
+    startDate: ISODate('2025-05-23T04:47:06.197Z'),
+    status: 'active',
+    progress: 30,
+    createdBy: {
+      _id: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+      name: 'Alice Johnson'
+    }
+  }
+]
+
+
+Section 3: Update Operations
+
+
+9-> Change the status of one task to "completed"
+
+Command:
+taskmanager> db.tasks.updateOne({_id: ObjectId('682fff5246e2e0e9d76c4bd5')},{$set:{status: "completed"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+taskmanager> db.tasks.find()
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd5'),
+    title: 'Set up CI/CD pipeline',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-25T00:00:00.000Z'),
+    status: 'completed'
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd6'),
+    title: 'Cloud infra setup',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+    priority: 'medium',
+    dueDate: ISODate('2025-06-01T00:00:00.000Z'),
+    status: 'not started'
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd7'),
+    title: 'Database migration',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd2'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-30T00:00:00.000Z'),
+    status: 'not started'
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd8'),
+    title: 'Frontend redesign',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'low',
+    dueDate: ISODate('2025-07-15T00:00:00.000Z'),
+    status: 'completed'
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd9'),
+    title: 'Bug fixes',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-23T00:00:00.000Z'),
+    status: 'in progress'
+  }
+]
+
+
+10-> Add a new role field called "teamLead" to one of the users
+
+Command:
+taskmanager> db.users.updateOne({_id: ObjectId('682ffd4046e2e0e9d76c4bd0')},{$push:{role:"teamLead"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+taskmanager> db.users.find()
+
+Output:
+[
+  {
+    _id: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+    name: 'Alice Johnson',
+    email: 'alice@example.com',
+    role: [ 'admin', 'teamLead' ],
+    active: true
+  },
+  {
+    _id: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    name: 'Bob Smith',
+    email: 'bob@example.com',
+    role: [ 'developer' ],
+    active: true
+  },
+  {
+    _id: ObjectId('682ffd4046e2e0e9d76c4bd2'),
+    name: 'Carol Davis',
+    email: 'carol@example.com',
+    role: [ 'manager' ],
+    active: false
+  }
+]
+
+
+11-> Add a new tag array to a task: ["urgent", "frontend"]
+
+Command:
+taskmanager> db.tasks.updateOne({_id: ObjectId('682fff5246e2e0e9d76c4bd8')},{$set:{tag:["urgent","frountend"]}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+taskmanager> db.tasks.find({_id:ObjectId('682fff5246e2e0e9d76c4bd8')})
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd8'),
+    title: 'Frontend redesign',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'low',
+    dueDate: ISODate('2025-07-15T00:00:00.000Z'),
+    status: 'completed',
+    tag: [ 'urgent', 'frountend' ]
+  }
+]
+
+
+Section 4: Array and Subdocument Operations
+
+
+12-> Add a new tag "UI" to the task’s tags array using $addToSet
+
+-->adding empty tag field to all documents that don't have the tag field
+
+Command:
+taskmanager> db.tasks.updateMany({tag:{$exists:false}},{$set:{tag:[]}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 4,
+  modifiedCount: 4,
+  upsertedCount: 0
+}
+
+Command:
+db.tasks.updateOne({_id:ObjectId('682fff5246e2e0e9d76c4bd6')},{$addToSet:{tag:"UI"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+taskmanager> db.tasks.find()
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd5'),
+    title: 'Set up CI/CD pipeline',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-25T00:00:00.000Z'),
+    status: 'completed',
+    tag: []
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd6'),
+    title: 'Cloud infra setup',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+    priority: 'medium',
+    dueDate: ISODate('2025-06-01T00:00:00.000Z'),
+    status: 'not started',
+    tag: [ 'UI' ]
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd7'),
+    title: 'Database migration',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd2'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-30T00:00:00.000Z'),
+    status: 'not started',
+    tag: []
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd8'),
+    title: 'Frontend redesign',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'low',
+    dueDate: ISODate('2025-07-15T00:00:00.000Z'),
+    status: 'completed',
+    tag: [ 'urgent', 'frountend' ]
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd9'),
+    title: 'Bug fixes',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-23T00:00:00.000Z'),
+    status: 'in progress',
+    tag: []
+  }
+]
+
+
+Command:
+taskmanager> db.tasks.find({_id:ObjectId('682fff5246e2e0e9d76c4bd6')})
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd6'),
+    title: 'Cloud infra setup',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+    priority: 'medium',
+    dueDate: ISODate('2025-06-01T00:00:00.000Z'),
+    status: 'not started',
+    tag: [ 'UI' ]
+  }
+]
+
+
+13-> Remove "frontend" from a task’s tag list
+
+Command:
+taskmanager> db.tasks.updateOne({_id: ObjectId('682fff5246e2e0e9d76c4bd8')},{$pull:{tag:"frountend"}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+taskmanager> db.tasks.find({_id: ObjectId('682fff5246e2e0e9d76c4bd8')})
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd8'),
+    title: 'Frontend redesign',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'low',
+    dueDate: ISODate('2025-07-15T00:00:00.000Z'),
+    status: 'completed',
+    tag: [ 'urgent' ]
+  }
+]
+
+14-> Use $inc to increment a project’s progress field by 10
+
+Command:
+taskmanager> db.projects.updateOne({_id: ObjectId('682ffdca46e2e0e9d76c4bd3')},{$inc:{progress:10}})
+
+Output:
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+Command:
+taskmanager> db.projects.find({_id: ObjectId('682ffdca46e2e0e9d76c4bd3')})
+
+Output:
+[
+  {
+    _id: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    title: 'Project Phoenix',
+    description: 'Next-gen platform development',
+    startDate: ISODate('2025-05-23T04:47:06.197Z'),
+    status: 'active',
+    progress: 40,
+    createdBy: {
+      _id: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+      name: 'Alice Johnson'
+    }
+  }
+]
+
+
+Section 5: Aggregation & Lookup
+
+
+15-> Use $lookup to join tasks with users and show task title + assignee name
+
+Command:
+taskmanager> db.tasks.aggregate([{$lookup:{from:"users",localField:"assignedTo",foreignField:"_id",as:"assignee"}},{$project:{"assignee.name":1,title:1}}])
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd5'),
+    title: 'Set up CI/CD pipeline',
+    assignee: [ { name: 'Bob Smith' } ]
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd6'),
+    title: 'Cloud infra setup',
+    assignee: [ { name: 'Bob Smith' } ]
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd7'),
+    title: 'Database migration',
+    assignee: [ { name: 'Carol Davis' } ]
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd8'),
+    title: 'Frontend redesign',
+    assignee: [ { name: 'Bob Smith' } ]
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd9'),
+    title: 'Bug fixes',
+    assignee: [ { name: 'Alice Johnson' } ]
+  }
+]
+
+
+16-> Use $lookup to join tasks with projects, and filter tasks where project status = active
+
+Command:
+taskmanager> db.tasks.aggregate([{$lookup:{from:"projects",localField:"projectId",foreignField:"_id",as:"project"}},{$unwind:"$project"},{$match:{"project.status":"active"}}])
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd5'),
+    title: 'Set up CI/CD pipeline',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-25T00:00:00.000Z'),
+    status: 'completed',
+    tag: [],
+    project: {
+      _id: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+      title: 'Project Phoenix',
+      description: 'Next-gen platform development',
+      startDate: ISODate('2025-05-23T04:47:06.197Z'),
+      status: 'active',
+      progress: 40,
+      createdBy: {
+        _id: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+        name: 'Alice Johnson'
+      }
+    }
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd8'),
+    title: 'Frontend redesign',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'low',
+    dueDate: ISODate('2025-07-15T00:00:00.000Z'),
+    status: 'completed',
+    tag: [ 'urgent' ],
+    project: {
+      _id: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+      title: 'Project Phoenix',
+      description: 'Next-gen platform development',
+      startDate: ISODate('2025-05-23T04:47:06.197Z'),
+      status: 'active',
+      progress: 40,
+      createdBy: {
+        _id: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+        name: 'Alice Johnson'
+      }
+    }
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd9'),
+    title: 'Bug fixes',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-23T00:00:00.000Z'),
+    status: 'in progress',
+    tag: [],
+    project: {
+      _id: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+      title: 'Project Phoenix',
+      description: 'Next-gen platform development',
+      startDate: ISODate('2025-05-23T04:47:06.197Z'),
+      status: 'active',
+      progress: 40,
+      createdBy: {
+        _id: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+        name: 'Alice Johnson'
+      }
+    }
+  }
+]
+
+
+17-> Use $group to get count of tasks per status
+
+Command:
+taskmanager> db.tasks.aggregate([{$group: {_id: "$status",count: { $sum: 1 }}}]);
+
+Output:
+[
+  { _id: 'not started', count: 2 },
+  { _id: 'in progress', count: 1 },
+  { _id: 'completed', count: 2 }
+]
+
+
+18-> Use $match , $sort , and $limit to get top 3 soonest due task
+
+Command:
+taskmanager> db.tasks.find().sort({ dueDate: 1 }).limit(3);
+
+Output:
+[
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd9'),
+    title: 'Bug fixes',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd0'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-23T00:00:00.000Z'),
+    status: 'in progress',
+    tag: []
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd5'),
+    title: 'Set up CI/CD pipeline',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd1'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd3'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-25T00:00:00.000Z'),
+    status: 'completed',
+    tag: []
+  },
+  {
+    _id: ObjectId('682fff5246e2e0e9d76c4bd7'),
+    title: 'Database migration',
+    assignedTo: ObjectId('682ffd4046e2e0e9d76c4bd2'),
+    projectId: ObjectId('682ffdca46e2e0e9d76c4bd4'),
+    priority: 'high',
+    dueDate: ISODate('2025-05-30T00:00:00.000Z'),
+    status: 'not started',
+    tag: []
+  }
+]
