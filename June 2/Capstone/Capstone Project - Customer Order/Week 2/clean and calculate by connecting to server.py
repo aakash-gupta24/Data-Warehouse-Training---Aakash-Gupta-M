@@ -2,13 +2,12 @@ import pandas as pd
 import pyodbc
 
 # --- Setup connection to MySQL via ODBC ---
-# Replace with your actual connection details
 
-server = 'AK-XIAOMI'       # e.g., 'localhost' or IP
+server = 'AK-XIAOMI'    
 database = 'customerOrders'
 
 
-# Define the connection string for MySQL ODBC Driver (example)
+# Define the connection string for MySQL ODBC Driver
 conn_str = (
     'DRIVER={SQL Server};'
     f'SERVER={server};'
@@ -24,7 +23,7 @@ customers = pd.read_sql('SELECT * FROM customers', conn)
 orders = pd.read_sql('SELECT * FROM orders', conn)
 delivery_status = pd.read_sql('SELECT * FROM delivery_status', conn)
 
-# Close connection (optional here, pandas will use it only to fetch)
+# Close connection
 conn.close()
 
 # --- Data cleaning ---
