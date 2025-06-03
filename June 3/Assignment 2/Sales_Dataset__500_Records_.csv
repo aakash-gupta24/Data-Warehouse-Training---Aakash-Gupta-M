@@ -1,0 +1,501 @@
+OrderID,CustomerName,ProductCategory,Amount,OrderDate,DeliveryStatus,Discount,City,PaymentMode,CustomerSince
+2824,Donald Walker,Books,783.04,2024-12-26,Returned,0.15,Lake Joyside,Credit Card,2020-10-15
+7912,Brandon Hall,Groceries,905.0,2024-09-12,Cancelled,0.03,New Jamesside,Wallet,2022-03-15
+4611,Donald Booth,Fashion,657.96,2025-01-12,Returned,0.01,Lake Roberto,Wallet,2021-08-07
+3547,Phillip Garcia,Fashion,606.89,2024-03-24,Returned,0.15,West Melanieview,Wallet,2020-08-08
+8527,Valerie Gray,Toys,77.87,2024-08-04,Delivered,0.17,Mariastad,Cash,2022-11-15
+4150,Amber Perez,Books,352.37,2024-01-13,Cancelled,0.24,Port Jesseville,Cash,2022-01-13
+5554,Roy Martin,Toys,148.33,2024-03-04,Cancelled,0.27,Lake Joseph,Cash,2023-04-29
+2169,Carolyn Daniel,Electronics,14.09,2023-10-07,Delivered,0.25,Grayside,Credit Card,2021-05-09
+6313,Patty Perez,Groceries,79.83,2023-06-27,Cancelled,0.12,Richardland,Credit Card,2021-04-25
+6155,Jonathan Wilkerson,Fashion,882.68,2024-10-14,Cancelled,0.27,Thomasberg,Cash,2021-06-20
+9830,Kevin Hurst,Books,870.55,2024-04-08,Delivered,0.22,Jeffreyberg,Wallet,2022-08-02
+9085,Anthony Rodriguez,Groceries,921.73,2024-10-02,Cancelled,0.03,Port Erin,UPI,2022-12-15
+2040,Kyle Mcdonald,Toys,327.52,2023-12-15,Returned,0.06,Lake Jenniferside,Wallet,2021-07-21
+6573,Jeffrey Chavez,Books,676.02,2024-12-14,Cancelled,0.19,Teresaburgh,Wallet,2022-07-30
+2743,Elizabeth Fowler,Electronics,47.06,2024-09-18,Delivered,0.13,East Nathaniel,Cash,2021-02-07
+9837,Tammy Sellers,Books,46.15,2024-09-10,Cancelled,0.05,Tracyville,UPI,2021-12-17
+6038,David Bradley,Fashion,348.51,2023-08-03,Returned,0.23,Lake Toddland,UPI,2022-09-07
+3060,John Pierce,Toys,362.09,2023-12-25,Returned,0.03,Brandtside,Cash,2023-05-09
+4295,Jennifer Powers,Electronics,684.26,2024-03-19,Cancelled,0.21,Lammouth,UPI,2020-12-06
+5061,George Chapman,Electronics,251.89,2023-11-28,Pending,0.27,North Chad,Cash,2023-02-07
+1964,Taylor Heath,Toys,578.5,2023-07-28,Cancelled,0.01,West Elizabeth,Cash,2021-04-30
+9834,Timothy Duncan,Electronics,944.55,2024-06-04,Cancelled,0.07,Port Thomas,Wallet,2022-02-24
+4119,Matthew Gomez,Books,326.67,2024-04-17,Returned,0.09,Shieldston,Cash,2023-04-14
+2612,Nicholas Mcbride,Fashion,219.05,2023-08-26,Delivered,0.27,East James,UPI,2022-04-29
+3296,Donald Wright,Fashion,579.99,2025-05-20,Cancelled,0.25,South Lindseyside,Wallet,2020-11-01
+1828,Kimberly Smith,Toys,89.01,2023-08-14,Delivered,0.04,East Richard,Credit Card,2022-06-19
+4502,Stephanie Martin,Electronics,656.32,2023-06-04,Pending,0.2,Bakermouth,Credit Card,2021-08-19
+7930,Monica Logan,Books,130.5,2024-10-29,Cancelled,0.11,Mooreport,Cash,2021-05-06
+1958,Kimberly Adkins,Electronics,98.66,2023-07-17,Cancelled,0.13,New Thomashaven,Wallet,2021-02-01
+1931,Angela Lopez,Electronics,686.21,2024-09-07,Cancelled,0.17,Lake Michellefurt,UPI,2020-12-05
+5033,Amanda Miller,Toys,552.76,2024-10-25,Pending,0.21,Sarahborough,Wallet,2023-04-08
+6147,James Powers,Toys,561.91,2024-01-22,Cancelled,0.05,Stewartland,Credit Card,2020-06-16
+8508,Kristine Garcia,Electronics,382.59,2024-07-24,Delivered,0.22,New Joseph,Wallet,2021-11-26
+2127,Jaclyn Moore,Groceries,933.32,2025-03-11,Returned,0.01,Cherylhaven,Cash,2020-06-14
+5905,Ashley Humphrey,Books,844.87,2023-12-25,Pending,0.28,North Juliaberg,Cash,2021-07-30
+5616,Michelle Harris,Books,98.88,2024-10-07,Cancelled,0.21,Williamview,UPI,2020-08-19
+2512,Sandra Williams,Toys,630.21,2024-02-17,Pending,0.08,Lake Tina,UPI,2021-02-08
+8239,Jessica Smith,Books,610.08,2023-07-31,Delivered,0.09,New Barry,UPI,2021-12-27
+3426,Andrew Diaz,Groceries,278.75,2025-05-27,Delivered,0.24,West Jasonbury,UPI,2023-04-04
+2684,Justin Baxter,Books,837.46,2024-09-27,Cancelled,0.22,East Michelle,Credit Card,2021-03-04
+7755,Norman Cook,Toys,903.74,2025-05-25,Cancelled,0.18,Phambury,Cash,2021-07-21
+3608,Ashley Brennan,Electronics,368.54,2025-03-30,Cancelled,0.12,Walkermouth,UPI,2021-11-27
+6000,Shelby Walker,Groceries,857.57,2024-10-27,Pending,0.16,South Mark,UPI,2020-09-17
+5573,Jordan Frazier,Books,981.05,2025-03-19,Cancelled,0.02,Sheilaville,Cash,2021-07-12
+3925,Victoria Johnson,Toys,12.37,2024-09-08,Cancelled,0.17,Reedmouth,Wallet,2022-04-10
+9379,Steven Lee,Books,181.97,2023-07-07,Returned,0.22,Smithside,UPI,2023-05-04
+4228,Benjamin Beck,Toys,290.34,2024-02-14,Delivered,0.12,Elizabethville,Cash,2021-09-11
+9308,Jason Powell,Toys,360.68,2024-01-18,Cancelled,0.07,East Robert,Credit Card,2022-01-11
+3851,Elizabeth Kelley,Fashion,517.15,2023-06-03,Cancelled,0.19,Justinchester,Credit Card,2022-11-19
+6279,Jeremy Lewis,Electronics,115.78,2024-06-04,Pending,0.04,Lake Christopher,Cash,2022-08-11
+6491,Trevor Young,Toys,249.61,2024-01-30,Returned,0.19,Port James,UPI,2020-07-09
+1757,John Atkinson,Books,724.04,2023-07-29,Returned,0.06,Perryshire,Cash,2021-03-31
+7291,David Douglas Jr.,Groceries,569.88,2025-01-06,Cancelled,0.25,Port Ronaldburgh,UPI,2023-05-19
+9486,Justin Lowery,Electronics,554.55,2023-09-05,Pending,0.24,Andersonmouth,Wallet,2023-04-05
+9702,Linda Dodson DVM,Toys,545.79,2024-09-20,Pending,0.12,Rivasside,UPI,2022-04-25
+3607,Karen Green,Books,621.24,2023-12-12,Cancelled,0.18,Katiehaven,UPI,2022-06-24
+4919,Billy Mitchell,Electronics,653.51,2023-12-31,Delivered,0.08,Luisside,UPI,2020-10-05
+3267,James Hernandez,Books,593.98,2023-11-16,Returned,0.2,South Rickside,Wallet,2022-05-26
+7812,Ross Price,Toys,133.78,2025-01-20,Pending,0.17,Port Nicoleshire,Credit Card,2022-01-13
+8814,Guy Molina,Toys,708.85,2025-03-26,Returned,0.16,Medinaside,UPI,2022-12-26
+4613,Don Tucker MD,Toys,761.06,2024-11-03,Returned,0.03,Ramseymouth,Credit Card,2020-12-17
+9751,James Elliott,Books,824.56,2023-06-24,Cancelled,0.21,Lake Roymouth,UPI,2021-03-11
+1823,Garrett Gibson,Books,384.37,2024-02-20,Cancelled,0.14,Ramirezchester,Cash,2021-06-28
+2341,Paul Williams,Toys,151.3,2024-02-29,Cancelled,0.24,Lake Casey,Credit Card,2023-03-11
+1659,Tiffany Gonzalez,Books,741.43,2023-06-18,Returned,0.02,East David,Credit Card,2023-04-07
+2874,Claudia Lyons,Books,948.64,2025-01-18,Delivered,0.17,Garyville,UPI,2021-02-11
+6096,Alexander Collins,Toys,873.94,2024-11-10,Cancelled,0.03,Sandersborough,UPI,2020-09-28
+4978,Raymond Jefferson,Books,351.54,2024-09-11,Delivered,0.06,Port Tonyaton,Wallet,2021-11-23
+9728,Jacob Hunter,Groceries,64.1,2024-02-23,Returned,0.05,Port Robertfort,UPI,2020-11-12
+8102,Madison Poole,Groceries,114.42,2024-12-03,Returned,0.26,South Gregory,Wallet,2022-08-21
+5425,Tamara Hampton,Fashion,709.92,2024-05-29,Pending,0.13,Petersenshire,Wallet,2021-07-23
+6280,Sandra Miller,Groceries,81.76,2025-04-17,Cancelled,0.0,Sanchezmouth,UPI,2022-11-04
+7209,Johnny Nguyen,Groceries,291.32,2024-06-15,Returned,0.16,West Lauren,Wallet,2021-11-12
+5581,Meredith Hill,Groceries,256.24,2023-06-10,Cancelled,0.25,North John,Wallet,2022-02-23
+9004,Cynthia Alvarez,Books,364.81,2024-12-06,Returned,0.01,Westtown,Cash,2020-10-24
+5820,Michael Torres,Toys,444.13,2024-08-27,Delivered,0.12,Thomashaven,Credit Card,2021-11-18
+7971,Krista Bell MD,Electronics,141.94,2024-01-27,Pending,0.23,Jerryborough,UPI,2021-10-05
+2958,Tiffany Vaughn,Electronics,418.01,2023-10-29,Cancelled,0.26,Lake Todd,UPI,2022-12-04
+9595,Veronica Wall,Books,736.54,2024-01-19,Cancelled,0.21,West Harry,Credit Card,2020-06-23
+3073,William Tran,Toys,201.14,2024-11-25,Pending,0.1,Lake Miranda,Wallet,2022-07-04
+2680,Laura Harrison,Books,533.07,2024-05-10,Returned,0.14,Jackton,Cash,2021-06-29
+8827,Austin Vasquez,Books,291.26,2024-08-24,Returned,0.21,East Edwardshire,Wallet,2021-09-16
+2395,Bailey Duran DDS,Books,719.74,2025-02-06,Pending,0.2,Port Alexandra,Wallet,2022-05-02
+8253,Kevin Patterson,Books,998.21,2024-08-17,Cancelled,0.12,New Susanville,UPI,2021-04-20
+4457,Brad Allen,Books,419.23,2024-08-04,Delivered,0.03,East Aaronmouth,Cash,2023-05-08
+8699,David Mann,Toys,939.47,2024-11-30,Delivered,0.23,Jonesbury,Cash,2021-07-17
+4241,Joshua Holland,Groceries,229.98,2025-05-08,Cancelled,0.03,Margaretland,Wallet,2020-09-02
+3718,Linda Holloway,Toys,474.64,2025-05-18,Pending,0.02,Scottmouth,Wallet,2023-05-07
+5982,Terri Mason,Fashion,230.8,2024-06-20,Returned,0.06,Millerton,Wallet,2022-04-04
+5102,Darryl Craig,Electronics,522.75,2025-04-01,Returned,0.12,Port Emilyview,Wallet,2022-11-14
+3870,Matthew Moon,Toys,552.81,2023-10-21,Pending,0.3,Waltersfort,Cash,2020-10-21
+8700,Gary Santiago,Toys,527.84,2025-03-30,Delivered,0.22,West Robert,Credit Card,2022-07-11
+5722,Jennifer Hodges,Groceries,20.64,2023-07-01,Cancelled,0.25,Millerview,Cash,2021-10-17
+2899,Jennifer Robertson,Toys,953.09,2023-06-03,Delivered,0.28,Gutierrezborough,Credit Card,2022-08-16
+6927,Kathleen Ramos,Electronics,319.76,2023-07-13,Delivered,0.14,West Andrea,Credit Card,2021-08-23
+8178,Kari Johnson,Electronics,965.37,2024-10-04,Returned,0.3,Lake Eric,Credit Card,2022-10-05
+1224,Anna Gay,Groceries,723.48,2025-05-12,Returned,0.28,South Staceyberg,Cash,2022-07-16
+5781,Denise Davenport,Toys,579.07,2024-06-03,Delivered,0.18,South Andrea,Wallet,2022-01-18
+4122,Katie Suarez,Toys,225.91,2025-04-04,Returned,0.04,West Kendrachester,Cash,2021-11-11
+9318,Aaron Barber,Toys,845.42,2025-03-14,Pending,0.09,Grimesmouth,Credit Card,2022-09-16
+8935,Juan Daniels,Books,222.02,2024-05-21,Pending,0.0,Mollybury,Wallet,2022-11-07
+7274,Reginald Williams,Books,380.64,2025-01-01,Delivered,0.13,Thorntonfurt,Credit Card,2022-01-22
+3492,Andrew Shaw MD,Books,451.63,2025-04-08,Cancelled,0.28,Port Meganville,UPI,2022-08-28
+8486,Charles Pitts,Books,588.25,2023-09-30,Cancelled,0.29,South Kimberlyview,Cash,2021-11-09
+7512,Sarah Phelps,Groceries,566.39,2025-03-31,Pending,0.29,Finleyfort,Cash,2022-09-20
+1588,Cynthia Cohen,Electronics,619.61,2024-01-12,Delivered,0.1,Lake Christopher,Credit Card,2020-11-01
+2646,Michael Berger,Toys,446.88,2023-07-08,Cancelled,0.16,Lauraport,Credit Card,2021-12-10
+7141,David Jenkins,Electronics,485.99,2024-11-13,Cancelled,0.1,East Gregory,Credit Card,2023-01-04
+7267,Cynthia Durham,Fashion,579.41,2023-09-22,Pending,0.18,South Dana,UPI,2022-05-16
+5183,Stephanie Marshall,Groceries,198.98,2024-01-12,Pending,0.12,North Scott,Cash,2021-11-20
+5901,Jessica Wright,Electronics,145.56,2025-03-20,Cancelled,0.09,Jamesfurt,Cash,2022-06-22
+2747,Kenneth Andrews,Fashion,206.35,2024-11-27,Cancelled,0.25,Andrewfurt,UPI,2021-08-02
+1132,Melissa Garner,Toys,180.95,2023-07-11,Returned,0.0,Wallport,Cash,2021-05-25
+6772,Connor King,Books,123.84,2025-01-09,Delivered,0.23,Lake Colton,Cash,2023-02-01
+1645,Jeremiah Riley,Books,355.2,2024-12-22,Delivered,0.06,North Renee,Wallet,2021-10-22
+7807,Carlos Ryan,Toys,752.99,2024-03-13,Cancelled,0.22,Mariaview,Cash,2022-06-20
+5835,Gina Wilson,Toys,794.75,2023-07-31,Delivered,0.2,Port Tammy,UPI,2023-04-18
+7511,Regina Diaz,Toys,932.21,2025-02-06,Cancelled,0.04,Smithside,Cash,2020-12-10
+8451,Paul Baker,Toys,104.11,2024-03-24,Delivered,0.14,Danielbury,Wallet,2022-06-04
+1410,Terri Murphy,Electronics,210.0,2024-09-18,Cancelled,0.27,Lake Bryan,Wallet,2022-05-24
+5951,Audrey Williams,Books,318.79,2023-07-01,Pending,0.0,Wendyville,Wallet,2020-10-30
+4846,Brandy Chavez,Groceries,741.53,2024-11-04,Pending,0.12,Matthewsberg,Wallet,2022-03-08
+2622,Lisa Crosby,Electronics,905.89,2024-01-06,Cancelled,0.15,Lake Mitchellmouth,Wallet,2022-04-23
+4868,Ariana Jennings,Fashion,285.13,2024-07-29,Pending,0.13,Bruceview,Wallet,2021-03-23
+3001,Samantha Davis,Fashion,436.69,2023-11-14,Cancelled,0.04,North Kristinbury,Cash,2020-12-14
+4362,Phillip Clark,Electronics,554.67,2023-11-17,Cancelled,0.27,West Kim,UPI,2022-12-14
+1046,William Huerta,Groceries,383.26,2024-07-26,Delivered,0.16,Laurenville,Wallet,2023-03-25
+1422,Hunter Kramer,Books,973.2,2024-09-02,Returned,0.07,Alfredview,Cash,2020-08-22
+3076,Kelly Reese,Toys,849.81,2024-06-06,Pending,0.11,Stricklandhaven,Wallet,2022-12-11
+2786,Daniel Gilbert,Groceries,869.64,2024-12-18,Cancelled,0.03,Stephentown,Cash,2020-09-04
+8847,Jessica Rodriguez,Electronics,202.29,2024-12-07,Pending,0.15,Jonesland,Wallet,2021-10-15
+3430,Donald Schultz,Fashion,182.3,2024-08-01,Delivered,0.07,Oscarhaven,Wallet,2021-09-03
+8433,Jessica Mcguire,Fashion,774.17,2023-08-30,Returned,0.08,South Shannon,Credit Card,2021-05-22
+7779,Jesse Perry,Toys,187.62,2023-08-15,Pending,0.09,Ronaldview,Cash,2022-01-04
+3500,Kara Davis,Toys,786.27,2023-08-08,Returned,0.2,South Colinstad,Credit Card,2020-12-21
+1982,Kristina Rivera,Groceries,564.23,2023-09-05,Pending,0.25,Gomezchester,Credit Card,2020-08-20
+5712,Heather Lane,Electronics,914.46,2023-11-15,Cancelled,0.27,Lake Timothy,Credit Card,2020-11-17
+6736,Holly Farmer,Electronics,624.15,2024-08-21,Returned,0.06,Port Roy,Credit Card,2022-10-21
+1430,Mary Steele,Fashion,198.63,2023-06-25,Delivered,0.14,West Jacqueline,Wallet,2021-09-24
+6567,Christopher Thomas,Fashion,654.69,2024-10-25,Delivered,0.28,Jonestown,UPI,2020-10-22
+9691,Jason Peterson,Fashion,416.47,2024-03-16,Returned,0.18,Jennifershire,Wallet,2022-12-15
+2391,Brittney Webster,Groceries,317.02,2023-07-11,Cancelled,0.23,West Scottchester,Credit Card,2022-06-26
+8242,Daniel Hunt,Toys,117.96,2024-02-26,Returned,0.07,Rodriguezshire,Credit Card,2022-06-27
+9633,Amber Foster,Groceries,98.55,2024-09-10,Pending,0.09,North Jamesborough,Credit Card,2021-01-01
+5186,Bryan Jimenez,Fashion,741.05,2024-05-02,Cancelled,0.22,East Omar,UPI,2023-05-31
+4770,Sandra Drake,Groceries,785.15,2023-07-28,Delivered,0.26,Hensleyton,Credit Card,2022-04-10
+1307,Blake Edwards,Toys,41.59,2024-05-01,Delivered,0.11,Mckinneychester,Cash,2021-08-25
+2887,Vincent Jackson,Books,813.82,2024-09-25,Returned,0.26,Collierstad,UPI,2020-10-16
+8155,Dana Chapman,Books,313.55,2024-07-13,Cancelled,0.22,South Monicamouth,Cash,2021-05-12
+6456,Angela Schultz,Fashion,984.71,2024-07-19,Returned,0.29,Port Michael,Credit Card,2023-03-01
+3419,Charles Gonzalez,Books,44.28,2024-09-12,Returned,0.19,Port Katherine,UPI,2020-09-27
+3902,Lori Marshall,Toys,321.84,2024-08-13,Pending,0.02,Maldonadoshire,Wallet,2023-02-25
+6295,Lori Hernandez,Books,549.41,2023-07-26,Cancelled,0.05,Ramosport,Wallet,2021-08-02
+1920,Benjamin Murray,Toys,910.12,2023-07-02,Delivered,0.12,West Marieland,Wallet,2023-02-28
+2479,Katie Ford,Groceries,868.63,2024-08-06,Cancelled,0.28,South Reginashire,Cash,2023-03-11
+4084,John Hernandez,Groceries,182.64,2023-07-21,Returned,0.13,Garciamouth,UPI,2020-10-11
+9266,Amanda Zimmerman,Fashion,664.51,2024-05-09,Cancelled,0.2,West Nathan,Wallet,2021-08-15
+7347,George Harper,Groceries,243.11,2025-02-05,Delivered,0.3,Cameronville,Cash,2022-10-16
+7333,Nathaniel Douglas,Fashion,695.55,2025-05-06,Pending,0.27,West Christopher,Credit Card,2023-03-29
+3317,Emily Douglas,Fashion,468.56,2024-10-29,Returned,0.21,Andersonland,UPI,2021-09-25
+7171,Erin Anderson,Fashion,643.57,2024-11-29,Cancelled,0.08,Lake Ellenhaven,Wallet,2021-12-16
+1298,Christopher Lewis,Fashion,111.41,2025-01-18,Pending,0.15,Leeberg,Credit Card,2021-01-28
+2264,Richard Romero,Fashion,509.72,2024-07-26,Cancelled,0.09,Lake Matthewberg,Wallet,2022-12-16
+7172,Christopher Schwartz,Books,490.29,2024-09-30,Returned,0.12,Lake Samuel,Cash,2022-03-02
+6968,Cynthia Wallace,Toys,372.95,2024-01-10,Pending,0.28,Youngbury,Cash,2021-09-25
+8684,Cheyenne Gregory,Fashion,73.62,2024-08-19,Returned,0.11,Murrayport,UPI,2022-01-16
+9239,Tracy Montoya,Electronics,897.41,2025-02-14,Cancelled,0.04,Port John,Wallet,2023-02-23
+8873,Kristen Garcia,Books,439.85,2025-03-21,Cancelled,0.13,West Christopherburgh,Credit Card,2021-07-30
+8361,Brittany Kim,Fashion,901.73,2025-05-10,Returned,0.2,Port Shannon,Cash,2021-11-27
+1436,James Brooks,Groceries,978.96,2024-03-28,Cancelled,0.09,West Jeffreymouth,Credit Card,2020-11-02
+6493,Brenda Mitchell,Fashion,195.94,2025-03-08,Returned,0.23,Hortonberg,Cash,2022-05-31
+8349,Susan Smith,Groceries,737.59,2023-11-17,Pending,0.24,New Shelby,Wallet,2023-01-03
+9647,Ricardo Young,Toys,471.74,2023-09-05,Cancelled,0.2,East Robertmouth,Cash,2020-09-07
+2816,Kathryn Herrera,Electronics,975.09,2024-10-05,Cancelled,0.2,Lake Douglas,Cash,2022-03-30
+1025,Cynthia Butler,Electronics,536.8,2024-10-31,Cancelled,0.05,New Theresaland,UPI,2022-08-28
+9914,Virginia Spencer,Books,835.15,2024-04-01,Pending,0.02,Williamsfurt,UPI,2022-01-02
+5155,Heather Jones,Fashion,567.4,2023-12-07,Delivered,0.19,Port Bonniemouth,Credit Card,2020-12-26
+1726,George Day,Groceries,574.27,2025-03-08,Cancelled,0.18,Pollardfort,Credit Card,2023-02-08
+3986,Amy Parsons,Electronics,884.25,2024-05-23,Delivered,0.14,West Jamesborough,UPI,2020-08-06
+6170,Kaylee Hays,Groceries,330.16,2024-07-28,Delivered,0.25,Kingborough,Cash,2021-08-20
+6848,Amber Rios,Books,400.47,2024-01-01,Returned,0.0,Port Michealfurt,UPI,2022-04-16
+7334,Cody Holt,Fashion,194.4,2024-03-14,Pending,0.04,Lauriechester,UPI,2020-10-02
+8055,Samantha Gardner,Electronics,472.67,2024-02-07,Pending,0.02,North Markport,Cash,2021-09-21
+8305,Jessica Norris,Groceries,50.5,2024-03-02,Cancelled,0.21,Williamsstad,Cash,2023-01-13
+8126,William Gould,Groceries,523.87,2023-07-31,Pending,0.18,Coxburgh,Credit Card,2020-07-20
+3339,Megan Kim,Fashion,987.49,2023-09-09,Cancelled,0.25,East Kimberlystad,Wallet,2021-12-16
+7272,Amanda Hernandez,Fashion,251.94,2024-05-17,Delivered,0.25,Nathanland,Cash,2022-11-10
+3255,Jennifer Banks,Groceries,42.49,2023-12-13,Delivered,0.26,North Jillfort,Credit Card,2022-08-15
+7340,Autumn Hampton,Toys,206.03,2024-11-30,Returned,0.26,Lewisport,Wallet,2023-05-16
+9047,Chad Jones,Groceries,51.28,2023-10-15,Returned,0.01,Osbornmouth,UPI,2023-04-05
+6692,Krista Roberts,Groceries,449.48,2024-01-21,Pending,0.11,Lake Jenna,UPI,2023-05-25
+3852,Katie Martinez,Groceries,665.03,2023-11-06,Cancelled,0.0,East Kristy,Wallet,2020-07-12
+6912,Jackie Lara,Electronics,917.73,2024-08-04,Pending,0.22,New Nicole,Cash,2020-09-12
+6067,Mitchell Mendoza,Toys,705.06,2024-04-17,Pending,0.07,Morrowland,Cash,2020-12-13
+6194,Joanna Frazier,Electronics,618.19,2024-02-25,Returned,0.04,Port Kimberly,Credit Card,2023-02-20
+3981,Betty Shaw,Toys,469.48,2025-04-07,Returned,0.0,Port Davidberg,Wallet,2021-09-17
+3697,Timothy Perez,Fashion,781.0,2025-06-02,Delivered,0.23,Meghanview,Wallet,2021-04-02
+5496,Eric Ferguson,Fashion,865.0,2024-06-27,Cancelled,0.03,New Shelly,Credit Card,2021-01-27
+3804,Michelle Jacobs,Fashion,242.0,2025-03-18,Returned,0.2,Port Michelleland,Credit Card,2020-08-11
+5336,Pamela Butler,Electronics,812.68,2024-10-11,Cancelled,0.02,South Pamelaside,Credit Card,2021-08-25
+5949,Dr. Michael Evans,Toys,918.14,2023-07-29,Pending,0.01,East Scottfort,Wallet,2022-05-24
+4342,Charles Hensley,Electronics,488.16,2024-02-06,Returned,0.12,Theresaberg,Credit Card,2021-12-29
+9437,Emma Owens,Books,610.71,2023-12-27,Pending,0.04,Wrightville,Cash,2020-08-19
+5754,Sharon Barnes,Books,328.02,2025-04-05,Cancelled,0.15,Port Mark,UPI,2022-11-16
+6123,Christopher Ferrell,Toys,413.42,2024-05-30,Returned,0.22,Kochfort,Wallet,2020-07-08
+2475,Kathy Levy,Electronics,786.47,2023-11-17,Cancelled,0.09,Brandonport,Credit Card,2022-07-10
+8710,Adam Rodriguez,Electronics,876.96,2023-09-15,Pending,0.21,Jessicafurt,Wallet,2021-12-22
+1741,Kelly Lee,Fashion,299.21,2024-08-05,Delivered,0.11,Charleshaven,Wallet,2022-05-02
+5582,Lisa Carr,Toys,272.01,2023-09-10,Delivered,0.1,South Nathanielmouth,UPI,2022-10-16
+6990,Christina Hicks,Fashion,401.82,2024-06-25,Delivered,0.06,North Benjaminmouth,UPI,2022-06-07
+9508,Larry Robertson,Electronics,687.85,2024-02-12,Cancelled,0.03,Franciscoport,UPI,2022-12-11
+6511,Katrina Burns,Toys,61.74,2024-08-13,Cancelled,0.24,Thomastown,Wallet,2021-12-26
+6427,Veronica Silva,Groceries,285.3,2025-02-10,Delivered,0.3,New Thomasshire,UPI,2022-11-16
+4728,Lauren Jackson,Books,506.33,2024-10-03,Pending,0.02,Hernandezbury,Wallet,2020-07-21
+2800,Jeremy Barnes,Electronics,494.57,2024-04-18,Delivered,0.28,South Warren,Credit Card,2023-01-07
+8726,Nancy Brown,Books,801.69,2023-09-18,Cancelled,0.09,New Mark,Cash,2023-03-27
+8837,Emily Thompson,Groceries,247.61,2025-05-11,Cancelled,0.15,Amyview,UPI,2023-01-05
+8932,David Grant,Electronics,496.86,2023-11-24,Delivered,0.15,Kellieborough,Credit Card,2023-05-10
+9011,Gregory Peck,Electronics,913.27,2025-02-09,Delivered,0.07,Keithshire,Wallet,2023-04-19
+9899,William Cardenas,Groceries,624.36,2025-01-23,Cancelled,0.24,West Bobby,UPI,2020-10-02
+6674,Mary Burgess,Groceries,219.6,2023-11-16,Delivered,0.24,Port Amanda,Credit Card,2022-10-23
+5450,Luis Matthews,Toys,891.66,2023-12-08,Pending,0.24,Lake Rebeccabury,UPI,2023-02-18
+4814,Jason Love,Toys,233.32,2023-08-20,Delivered,0.01,North Tamara,Credit Card,2021-02-02
+7666,Shirley Alvarez,Groceries,403.32,2024-10-20,Delivered,0.1,Port Tamara,UPI,2021-10-13
+5676,Susan Davis,Books,662.05,2024-08-21,Pending,0.1,New Joanne,UPI,2020-07-29
+3868,Ryan Peck,Groceries,924.96,2023-07-01,Returned,0.09,Frenchburgh,Cash,2021-08-25
+1613,Keith Rodriguez,Toys,626.28,2024-02-18,Returned,0.13,Shawnside,UPI,2022-08-25
+9092,Brandi Gordon,Books,873.64,2023-12-31,Returned,0.3,Port Daniel,Wallet,2021-02-09
+8518,Michelle Smith,Electronics,178.23,2024-02-19,Pending,0.01,Ashleyborough,Cash,2021-03-01
+7643,Kaylee Miller,Groceries,700.36,2024-11-03,Returned,0.23,East Tinafort,Wallet,2021-10-17
+5064,James Griffin,Groceries,651.13,2023-12-27,Returned,0.01,Kevinshire,Credit Card,2020-06-19
+5285,Melissa Brown,Fashion,343.48,2023-09-02,Returned,0.23,Parkerfurt,UPI,2023-05-03
+9233,Stacy Carrillo,Electronics,74.39,2024-11-20,Returned,0.01,Lake Sabrinaport,Cash,2021-12-24
+4618,Casey Hernandez,Groceries,375.16,2025-01-03,Delivered,0.3,Robertside,Wallet,2022-06-03
+9806,Samantha Gill,Groceries,993.17,2024-11-12,Cancelled,0.07,New Seanstad,Wallet,2020-10-01
+2838,Joshua Wagner,Electronics,699.7,2024-08-20,Delivered,0.15,East Mark,Cash,2022-08-19
+2904,Michelle Burns,Fashion,922.29,2025-05-01,Returned,0.02,Stokesmouth,Credit Card,2020-12-23
+9409,Justin Hansen,Toys,836.49,2024-11-06,Returned,0.05,Jenniferfurt,UPI,2021-07-02
+1049,Laura Williams,Toys,598.71,2024-02-25,Pending,0.02,New Virginialand,Credit Card,2022-06-05
+1519,Christopher Taylor,Electronics,915.87,2024-10-13,Cancelled,0.29,Brooksfurt,Wallet,2022-04-29
+7184,Michael Stanley,Groceries,609.1,2024-07-25,Delivered,0.06,Lake Michelle,Wallet,2020-12-03
+3924,Jenna Anderson DVM,Toys,933.34,2025-03-12,Cancelled,0.11,Port Andrewport,Wallet,2022-05-22
+9920,James Hall,Toys,280.8,2024-05-25,Cancelled,0.28,Ericborough,Wallet,2020-11-24
+1527,Jennifer Miranda,Groceries,363.64,2025-04-19,Pending,0.1,East Jamieville,Wallet,2022-12-11
+1550,Michael Brennan,Toys,866.22,2023-12-10,Pending,0.02,South Scottside,Credit Card,2021-05-05
+1924,Wyatt Young,Books,544.08,2025-05-14,Returned,0.01,Barbaramouth,Credit Card,2021-06-05
+5944,Victoria Boyd,Books,783.59,2024-04-19,Pending,0.26,Joshuaside,Cash,2022-12-08
+3869,Jessica Simpson,Electronics,159.67,2024-02-25,Returned,0.12,Floydmouth,Credit Card,2023-05-19
+7821,Elijah White,Toys,682.47,2024-07-24,Cancelled,0.25,Allenbury,Wallet,2021-09-12
+3365,Suzanne Hart,Groceries,42.65,2024-04-21,Returned,0.28,South John,UPI,2021-04-13
+6411,Tammy Boone,Fashion,174.42,2023-08-13,Returned,0.22,North Joseph,Wallet,2023-04-14
+1647,Chelsea Gill,Books,812.99,2024-12-16,Returned,0.24,South Jason,Wallet,2021-11-01
+5967,Alexis Giles,Toys,429.83,2024-12-29,Cancelled,0.28,Lake Yvonnefort,UPI,2021-06-13
+4350,David Morris,Groceries,160.46,2024-01-08,Pending,0.29,Owensstad,Wallet,2021-09-24
+6892,Kathleen Garcia,Electronics,172.85,2024-12-15,Pending,0.16,Gillmouth,UPI,2021-04-13
+7073,Angel Shields,Books,558.59,2024-12-29,Cancelled,0.03,North Jose,Credit Card,2022-11-26
+7841,Craig Hall,Toys,469.46,2024-08-18,Delivered,0.17,South Andrea,Wallet,2023-05-01
+6530,Roberto Levy,Toys,737.55,2024-10-13,Delivered,0.17,Murraystad,Wallet,2021-02-19
+3293,Katherine Stark,Groceries,92.83,2024-07-28,Cancelled,0.27,New Arthurland,Credit Card,2023-04-06
+1794,Jennifer Kirby,Books,397.82,2023-11-29,Pending,0.27,Lake Edwardborough,Credit Card,2022-07-27
+8471,Luke Estrada,Books,595.24,2024-09-23,Pending,0.17,Hopkinstown,Credit Card,2020-06-12
+9719,Alexandra Moreno,Fashion,598.47,2024-01-02,Pending,0.19,Andrechester,Cash,2021-03-07
+2753,Kelly Allen,Electronics,309.81,2024-09-26,Cancelled,0.21,Lisaview,Wallet,2022-02-08
+2294,Jared Cunningham,Groceries,812.17,2024-11-25,Pending,0.26,West Gabriella,UPI,2020-10-05
+2531,James Alvarez,Toys,740.09,2024-10-09,Returned,0.28,Lake Georgefort,UPI,2022-04-07
+2562,Tamara Hall,Groceries,67.46,2025-05-03,Delivered,0.01,Nelsonland,Wallet,2023-05-01
+5593,Kristy Johnson,Fashion,961.35,2025-05-24,Returned,0.05,Alexisborough,Cash,2022-11-30
+3362,Michelle Sanders,Toys,710.66,2023-08-01,Pending,0.17,Franciscobury,Cash,2022-10-30
+7375,Kimberly Reyes,Electronics,786.37,2024-12-28,Cancelled,0.02,Port Vanessa,Cash,2020-10-01
+9204,Haley Davis,Electronics,887.5,2023-11-30,Pending,0.25,West Cassiefurt,Wallet,2021-10-22
+1485,Rachel Hayes,Fashion,803.44,2023-11-27,Pending,0.17,Angelafurt,UPI,2022-04-03
+4043,Mary Miller,Fashion,594.08,2024-09-25,Cancelled,0.11,Laurenland,Credit Card,2020-10-07
+5390,Michael Walters,Books,771.93,2024-12-28,Pending,0.29,Stewartville,Credit Card,2020-10-22
+1085,Jill Juarez,Electronics,396.12,2023-08-21,Pending,0.3,North Jacob,Wallet,2022-04-30
+9395,Alexander Gomez,Fashion,710.24,2023-08-14,Pending,0.15,Michelletown,Credit Card,2021-08-29
+7353,Misty Hansen,Books,878.93,2023-12-08,Cancelled,0.09,Lake Oscar,Cash,2021-01-03
+5405,Johnny Brown,Books,256.98,2024-05-05,Pending,0.02,Robertfort,Cash,2020-09-29
+6916,David Weber,Groceries,382.93,2024-09-06,Returned,0.1,South Daniel,Credit Card,2021-09-18
+1110,Evelyn Oliver,Fashion,774.39,2025-02-16,Delivered,0.22,Scottchester,Wallet,2023-03-10
+3230,Larry Dominguez,Electronics,618.13,2024-06-09,Cancelled,0.01,Gregoryfurt,UPI,2021-10-10
+5775,Mackenzie Faulkner,Books,400.76,2025-01-30,Delivered,0.18,West Nicholas,Cash,2022-02-02
+6980,Justin Vargas,Fashion,279.17,2024-07-30,Delivered,0.24,Lake Katrina,Wallet,2020-07-13
+8563,Christine Salinas,Toys,888.26,2025-03-09,Returned,0.18,Port Melaniechester,Credit Card,2023-04-13
+9180,Eric King,Fashion,167.17,2023-09-30,Cancelled,0.02,Mccormickland,Cash,2022-04-30
+8851,Kimberly Mclean,Groceries,78.46,2025-04-08,Cancelled,0.22,Stephensstad,Cash,2023-05-27
+9796,Suzanne Rodriguez,Electronics,950.94,2023-12-12,Pending,0.24,Gabrielton,Wallet,2022-10-24
+7547,Erin Hogan,Toys,918.86,2023-08-24,Delivered,0.11,North Jonathanhaven,Credit Card,2022-08-16
+4621,James Barton,Toys,498.43,2024-09-02,Pending,0.03,West Whitney,UPI,2022-06-21
+2712,Thomas Miller,Electronics,180.98,2025-03-09,Delivered,0.05,West Larry,Cash,2022-05-10
+4389,Hannah Davis,Books,438.7,2024-12-14,Pending,0.12,Floresport,Credit Card,2020-08-10
+2885,Greg Rodriguez,Books,786.41,2025-02-13,Pending,0.03,Lake John,UPI,2021-02-28
+3623,Jeffery Murray,Groceries,671.16,2025-02-11,Delivered,0.0,Sotoburgh,Cash,2023-02-21
+8080,Omar Ware,Toys,872.83,2024-05-17,Cancelled,0.23,Priceborough,UPI,2021-04-17
+5560,Rhonda Brown,Groceries,507.37,2023-08-21,Delivered,0.26,West Mark,Cash,2022-05-13
+2867,Scott Rose,Books,912.65,2024-10-11,Pending,0.27,Candicefurt,UPI,2022-11-30
+2871,Ryan Williamson,Electronics,877.66,2025-02-24,Returned,0.08,Samanthashire,Cash,2020-10-11
+3194,David Wilson,Groceries,333.92,2024-03-18,Returned,0.25,New Paul,Cash,2022-12-15
+3258,Jenny Tucker,Groceries,334.91,2024-07-24,Delivered,0.05,New Garrett,UPI,2021-08-24
+3298,Ryan Harvey,Groceries,206.52,2025-04-05,Cancelled,0.08,Stephaniefort,Credit Card,2020-12-31
+4196,Tracey Wagner,Electronics,81.58,2024-06-21,Returned,0.2,Cohenchester,Cash,2022-04-22
+9006,Keith Flynn,Electronics,997.67,2023-11-21,Pending,0.14,Antoniobury,Cash,2022-09-15
+5729,Jim Newton,Electronics,48.51,2025-01-17,Delivered,0.05,Dunnville,Credit Card,2022-11-08
+5389,Samantha Richardson,Books,75.03,2025-03-02,Cancelled,0.23,Port Jenniferside,UPI,2021-05-07
+7965,Ronald Potter,Electronics,438.23,2024-01-20,Delivered,0.13,South Joseland,UPI,2022-04-15
+2923,Cynthia Cochran,Fashion,407.69,2024-09-01,Returned,0.04,Michellechester,Cash,2021-02-14
+3281,Robin Trujillo,Toys,838.13,2024-08-18,Cancelled,0.22,Amandaside,UPI,2021-02-18
+6302,Eileen Armstrong,Fashion,553.25,2025-03-30,Delivered,0.03,East Sydneychester,Credit Card,2020-09-02
+5543,Beth Cline,Electronics,376.11,2023-12-13,Pending,0.23,Lake Marc,Wallet,2021-06-21
+7434,Kenneth Adams MD,Electronics,459.43,2024-05-19,Delivered,0.16,Lake Lauraland,Wallet,2022-02-17
+9447,Melissa Wiley,Groceries,997.14,2024-05-21,Cancelled,0.16,Murphytown,Credit Card,2020-10-24
+8511,Melissa Horn,Books,384.79,2025-02-10,Cancelled,0.03,Robinsonchester,Credit Card,2021-04-27
+9105,Ronald Morgan,Toys,129.18,2024-08-24,Cancelled,0.19,New Melissa,Credit Card,2021-11-17
+1793,Mark Copeland,Groceries,294.51,2023-06-15,Cancelled,0.13,Port Ericmouth,Credit Card,2020-06-03
+8009,Michael Anderson,Groceries,126.71,2024-10-19,Pending,0.29,Erikview,Cash,2020-10-24
+6905,Jacob Mckee,Fashion,538.48,2023-10-09,Returned,0.3,South Conniebury,Wallet,2022-03-30
+2494,April Woods,Fashion,604.59,2023-09-14,Pending,0.25,New Erin,Credit Card,2020-06-16
+6629,Virginia Henderson,Fashion,200.26,2023-09-13,Returned,0.01,Jonesfurt,Credit Card,2020-10-18
+2678,Jacob Evans,Fashion,841.69,2024-03-26,Returned,0.16,Lake Victoria,UPI,2021-01-09
+2120,Alejandra Santos,Electronics,948.84,2024-05-09,Returned,0.04,Jenniferberg,Wallet,2022-03-03
+8248,Angelica Garcia,Books,282.0,2025-01-07,Pending,0.16,New Jessicastad,Credit Card,2022-03-31
+6152,Danielle Newman,Books,409.25,2023-12-12,Pending,0.2,Kimberlytown,UPI,2023-03-21
+5942,Lawrence Lopez,Groceries,483.81,2024-04-02,Delivered,0.01,Debbiebury,UPI,2022-07-10
+7322,Jonathan Wheeler,Electronics,880.77,2024-07-17,Pending,0.27,West Sarahberg,Cash,2022-01-23
+7895,Michael Farmer,Books,697.72,2025-01-21,Returned,0.19,North Brendatown,UPI,2021-07-14
+4534,Antonio Mccormick,Books,748.96,2024-06-30,Delivered,0.01,Courtneyhaven,Cash,2022-03-09
+7939,Angela Herrera,Electronics,448.82,2024-09-23,Delivered,0.16,West Christopher,Wallet,2020-10-02
+9377,Valerie Moore,Toys,790.44,2024-02-11,Cancelled,0.02,Willisland,Wallet,2021-09-26
+8167,Sarah Brown,Books,824.82,2023-08-08,Delivered,0.0,Wilsonton,Cash,2021-09-25
+3877,Michael Miles,Fashion,973.03,2023-10-08,Cancelled,0.21,Bentonhaven,Cash,2022-08-14
+5247,Cameron Norman,Groceries,337.05,2023-12-28,Returned,0.09,Port Rachelmouth,Credit Card,2022-03-30
+5456,Deborah Proctor,Books,626.14,2024-10-02,Returned,0.05,South Spencerstad,Cash,2020-08-27
+9185,Carol Moore,Electronics,766.67,2025-01-23,Pending,0.04,New Emilyville,Cash,2021-05-22
+9336,Scott Smith,Fashion,733.1,2023-07-08,Pending,0.02,Coxberg,UPI,2021-03-07
+1579,Suzanne Yang,Groceries,181.55,2024-04-23,Pending,0.2,West John,Cash,2021-10-12
+5444,Laura Wilson,Books,843.58,2024-11-06,Returned,0.2,East Jeffreyhaven,Cash,2020-08-12
+7568,John Campbell,Toys,868.02,2025-03-20,Returned,0.05,Markside,Credit Card,2022-05-12
+1130,Eddie Mueller,Toys,95.66,2024-12-28,Cancelled,0.3,South Micheal,UPI,2022-07-08
+4201,Kimberly Flynn,Groceries,248.35,2023-09-27,Cancelled,0.21,South Andrewside,Wallet,2021-11-22
+1157,April Sandoval,Books,413.25,2025-03-23,Delivered,0.29,Daltonhaven,UPI,2021-06-06
+7878,Anthony Shea DDS,Books,463.12,2023-08-14,Returned,0.02,East Phyllishaven,UPI,2022-03-05
+7102,Paul Carpenter,Books,930.41,2024-06-29,Pending,0.27,Lake Lori,Wallet,2020-09-26
+2020,Victor Young,Toys,332.81,2023-12-22,Delivered,0.18,Sarafurt,Credit Card,2023-05-26
+6345,Dillon Jones,Books,954.28,2023-11-07,Returned,0.22,Port Kayla,Wallet,2020-11-18
+3546,Jerry Edwards,Toys,672.09,2023-09-04,Pending,0.03,Tamiborough,Cash,2022-05-05
+6051,Samuel Davis,Fashion,704.77,2025-02-19,Delivered,0.14,Margaretton,UPI,2021-05-02
+6370,Michael Schmitt,Groceries,981.04,2024-04-05,Returned,0.24,Lake Kentburgh,UPI,2020-07-20
+7625,Kristi Pierce,Books,61.92,2023-08-15,Cancelled,0.1,Garciaberg,Cash,2020-12-07
+1195,Richard Walker,Toys,199.14,2023-11-03,Delivered,0.04,Watsonland,UPI,2022-11-23
+5240,Angela Osborn,Toys,724.35,2023-11-03,Pending,0.24,Lambland,Credit Card,2021-10-30
+3007,Joel Jackson,Fashion,873.98,2024-08-21,Cancelled,0.03,Underwoodfurt,UPI,2022-07-12
+1483,Jeffery Gomez,Electronics,26.25,2025-05-08,Returned,0.25,West Joshua,UPI,2021-01-18
+1567,Lisa Holland,Books,204.59,2024-06-24,Delivered,0.04,Andradefort,UPI,2020-09-04
+2437,Chad Gonzalez,Books,996.1,2025-04-20,Returned,0.14,Lake Virginia,Cash,2022-09-24
+1319,Rachael Howard DDS,Groceries,86.28,2024-06-13,Delivered,0.29,Robertahaven,Wallet,2021-10-14
+7363,Alexander Harper,Groceries,115.53,2023-06-25,Returned,0.15,Brianfort,Cash,2022-09-02
+6856,Yvonne Dickson,Toys,354.87,2023-08-19,Returned,0.25,Lake John,Wallet,2022-09-09
+1916,Theresa Johnston,Books,800.47,2025-02-11,Delivered,0.21,Kellyburgh,Cash,2021-03-02
+4875,Renee Wolfe,Toys,578.4,2025-05-12,Cancelled,0.11,Lake Jackieshire,Wallet,2022-10-25
+3328,Chelsea Travis,Fashion,261.63,2025-04-17,Delivered,0.29,Weaverburgh,Credit Card,2022-07-03
+1621,David Robinson,Groceries,633.93,2024-07-15,Delivered,0.25,Smithborough,Wallet,2020-12-21
+6582,Tamara Richard,Toys,249.25,2024-02-09,Pending,0.14,North Dylanberg,Cash,2020-11-21
+9622,Toni Brooks,Groceries,205.59,2024-10-29,Pending,0.01,Willismouth,Cash,2021-09-13
+6285,Christopher Fry,Fashion,207.31,2025-02-07,Returned,0.28,Banksburgh,Cash,2022-10-23
+6846,Kevin Thompson,Groceries,25.8,2024-01-27,Returned,0.11,Davidtown,UPI,2023-05-28
+7415,Patricia Bradley,Toys,688.87,2023-10-22,Delivered,0.22,Samanthabury,UPI,2023-02-20
+2705,Brenda Mcgee,Books,517.98,2023-12-04,Delivered,0.18,Toniburgh,UPI,2023-02-15
+2453,Meagan Daniel,Electronics,393.05,2024-02-18,Cancelled,0.02,Smithborough,Wallet,2021-06-24
+2110,Richard Le,Electronics,515.4,2023-07-10,Pending,0.08,Kimchester,UPI,2021-02-15
+7783,James Payne Jr.,Electronics,644.12,2024-06-09,Cancelled,0.04,East Shannon,UPI,2020-07-23
+5831,Dean Garcia,Groceries,777.62,2024-02-23,Delivered,0.15,South Eugene,UPI,2020-09-26
+9962,Vanessa Morgan,Toys,701.01,2024-09-21,Pending,0.06,Bushchester,Cash,2023-03-14
+3703,Jessica Brown,Electronics,833.82,2024-02-15,Delivered,0.09,East Robert,Credit Card,2022-10-10
+9849,Douglas Young,Toys,545.98,2023-07-11,Delivered,0.08,Armstrongfort,Cash,2021-01-26
+1893,Jeffrey Phillips,Books,999.17,2024-10-29,Returned,0.26,Gonzaleztown,Wallet,2021-04-19
+3798,Vanessa Wells,Toys,241.1,2023-08-31,Pending,0.13,Kristenfort,Cash,2022-07-01
+5341,Joshua Lopez,Electronics,73.47,2025-04-20,Returned,0.26,Woodmouth,UPI,2020-08-10
+5313,Dennis Hood,Fashion,269.46,2024-08-14,Delivered,0.22,East Karenville,Cash,2020-10-13
+6632,Jennifer Avila,Groceries,994.74,2023-11-26,Cancelled,0.23,Port Paulhaven,Credit Card,2022-03-14
+9773,Taylor Armstrong,Fashion,597.63,2023-12-03,Delivered,0.25,Evansfurt,Cash,2020-07-25
+9226,Kellie Duncan,Fashion,432.76,2024-09-26,Returned,0.26,North Stacy,Cash,2022-04-30
+3832,Carol Lewis,Fashion,131.88,2023-10-30,Delivered,0.06,North Rodney,UPI,2023-04-29
+8133,Rodney Hernandez,Toys,650.15,2024-09-07,Returned,0.22,Luisland,Credit Card,2020-10-15
+7358,Kristen Gates,Toys,400.18,2024-07-10,Pending,0.28,Starktown,UPI,2023-05-26
+9561,Ashley Hernandez,Toys,722.36,2024-08-16,Cancelled,0.19,North Annaville,Wallet,2021-08-20
+9775,Sherry Baker,Groceries,680.2,2024-10-23,Cancelled,0.04,Armstrongfort,Cash,2020-07-30
+3821,Charles Franklin,Groceries,10.78,2024-11-22,Delivered,0.09,Williamsmouth,Wallet,2023-05-10
+4892,John Adams,Books,170.84,2024-03-18,Pending,0.14,West Lisaport,UPI,2021-09-28
+9054,Melinda Compton,Toys,852.36,2023-11-27,Returned,0.26,West Terri,Cash,2022-04-21
+6257,Jason Brewer,Toys,780.78,2023-10-26,Cancelled,0.03,Lewischester,Credit Card,2022-06-24
+9462,Samantha Robertson,Groceries,615.56,2023-10-04,Cancelled,0.25,West Jennafurt,Wallet,2020-12-29
+9589,Alyssa Lee,Electronics,578.42,2025-03-10,Pending,0.03,Port Brian,Cash,2020-07-23
+8478,Isaac Gonzalez,Groceries,176.06,2024-03-15,Returned,0.08,Wagnerville,Credit Card,2023-04-26
+1500,John Griffin,Toys,470.21,2025-04-09,Pending,0.09,Matthewsstad,UPI,2021-11-18
+3679,Deanna Rivas,Groceries,522.45,2023-08-12,Cancelled,0.0,Anthonyton,Credit Card,2021-02-10
+4511,Maria Byrd,Toys,885.24,2023-12-29,Returned,0.2,Palmertown,Wallet,2022-06-08
+3167,Lindsay Smith,Books,22.91,2023-12-16,Delivered,0.04,Jenniferview,UPI,2022-03-22
+7168,Judy Robinson,Toys,198.46,2024-01-23,Delivered,0.02,Silvatown,Wallet,2022-08-05
+7131,Linda Campbell,Fashion,191.0,2024-11-15,Pending,0.11,South Calebview,Wallet,2023-02-22
+6327,Debbie Dawson,Toys,812.52,2025-04-26,Pending,0.18,Jacobhaven,Cash,2021-06-10
+1930,Rebekah Greene,Fashion,663.05,2024-10-28,Returned,0.3,Erintown,Cash,2023-03-17
+9148,Deanna Barnes MD,Electronics,850.53,2023-06-30,Delivered,0.12,West Jessica,Credit Card,2021-05-13
+9759,Karen Shepard,Groceries,917.29,2024-03-07,Delivered,0.11,Meganside,UPI,2021-03-10
+5813,Carl Green,Fashion,140.41,2025-02-19,Returned,0.16,Lake Rachel,UPI,2023-03-15
+2463,Daniel Savage,Toys,271.08,2024-04-24,Delivered,0.14,Nathanshire,Cash,2021-09-01
+8598,Julie Delacruz,Toys,524.72,2024-08-29,Cancelled,0.12,South Pamelahaven,Credit Card,2020-12-05
+7253,Jennifer Pitts,Groceries,603.39,2023-09-28,Cancelled,0.08,East Matthew,Credit Card,2022-11-03
+8496,Scott White,Books,469.89,2023-08-04,Delivered,0.11,Cookburgh,Wallet,2021-10-01
+1950,Donald Juarez,Electronics,900.24,2023-10-11,Cancelled,0.14,South Kristen,Wallet,2020-10-16
+3120,Madeline Powell,Fashion,727.95,2024-06-07,Delivered,0.04,Smithside,UPI,2021-04-07
+7112,Stephanie Sherman,Electronics,682.98,2024-07-19,Returned,0.29,North Erica,Cash,2023-01-31
+5076,Shawn Collins,Groceries,514.99,2023-08-21,Cancelled,0.26,Gordonport,Wallet,2021-02-16
+2069,Elizabeth Carter,Books,855.01,2024-12-19,Cancelled,0.29,Ryanberg,Credit Card,2021-11-16
+9031,Colin Vaughan,Fashion,108.56,2025-05-16,Pending,0.09,Smithbury,Wallet,2020-12-22
+4460,Leah Jackson,Groceries,506.8,2024-03-13,Pending,0.09,South Nancyview,Cash,2022-09-10
+1796,Amber Rodriguez,Groceries,601.25,2025-03-13,Pending,0.29,North Hannahchester,Wallet,2022-04-23
+7230,David Miles,Fashion,838.55,2023-11-09,Returned,0.08,West Robertville,Wallet,2023-03-28
+9524,Larry Taylor,Fashion,333.73,2025-03-09,Cancelled,0.22,New Jenniferville,Credit Card,2021-08-15
+2741,Mr. Richard Decker DVM,Toys,969.11,2024-03-07,Cancelled,0.13,Phillipston,Wallet,2022-10-01
+9132,Melissa Castillo,Electronics,712.04,2023-12-02,Pending,0.2,North Emilyville,Cash,2022-11-10
+9095,Brandon Hunt,Books,12.8,2024-12-16,Returned,0.18,West Dawnmouth,Wallet,2021-09-04
+5327,Brett Thompson,Toys,822.43,2023-07-03,Cancelled,0.13,Michaelmouth,Cash,2022-03-25
+2898,Peter Williams,Books,791.7,2025-03-25,Pending,0.23,Lake Deborah,Credit Card,2021-10-25
+6857,Tina Adams,Toys,658.96,2024-12-23,Returned,0.03,West Lisaburgh,Credit Card,2020-11-25
+7566,Jesus Houston,Fashion,899.31,2024-11-19,Delivered,0.0,Marshburgh,Credit Card,2020-11-24
+3171,Amy Dunlap,Electronics,487.58,2023-10-04,Cancelled,0.1,South Rhondafort,Credit Card,2022-11-02
+3969,Peggy Carr,Books,229.46,2025-04-02,Cancelled,0.26,South Samantha,Credit Card,2020-11-24
+7738,Arthur Pena,Toys,72.52,2023-06-12,Cancelled,0.11,Lake Morgan,Credit Card,2022-08-17
+9570,Lisa Reynolds,Groceries,373.61,2024-12-18,Pending,0.26,South Michael,Credit Card,2023-04-18
+7305,Ronald Mcclain,Toys,731.22,2024-09-21,Delivered,0.23,North Dawnburgh,Wallet,2022-07-27
+8688,Sheila Jones,Books,903.28,2024-06-18,Delivered,0.16,Johnview,Cash,2020-08-19
+9305,Mason Powell,Electronics,651.67,2023-12-02,Returned,0.11,South Seanshire,UPI,2022-04-29
+2442,Jillian Wilson,Books,793.69,2024-06-23,Returned,0.12,North Richardton,Cash,2022-10-15
+9996,Brandon Munoz,Toys,839.38,2024-09-25,Delivered,0.08,Pamelaside,Credit Card,2021-04-19
+8474,Heidi Brown,Electronics,968.91,2023-11-23,Cancelled,0.02,Riverafort,Cash,2023-03-19
+6952,Ashley Malone,Groceries,842.52,2023-11-22,Cancelled,0.28,West Michaelport,Credit Card,2022-09-30
+9552,Brian Prince,Electronics,657.75,2024-06-19,Pending,0.24,Port Jennifer,Cash,2022-02-27
+2752,Craig Martinez,Fashion,633.34,2025-03-25,Returned,0.06,Lewisborough,Cash,2021-11-08
+2765,Amber Schultz,Electronics,504.87,2024-11-06,Cancelled,0.22,Port Patriciamouth,Cash,2023-03-21
+9260,Jonathan Moreno,Electronics,194.14,2023-07-10,Cancelled,0.08,Robersonfort,Credit Card,2022-07-31
+3903,Carrie Ochoa,Groceries,782.39,2023-08-22,Delivered,0.02,Sandovalmouth,Cash,2022-07-25
+7302,Lee Schwartz,Toys,276.49,2023-12-12,Pending,0.22,Raymondmouth,UPI,2021-09-01
+8419,Brenda Morrison,Books,690.6,2025-04-21,Pending,0.11,Meganside,UPI,2021-10-02
+4560,Marcus Roberts,Groceries,865.49,2024-02-26,Delivered,0.01,Lake Debra,Wallet,2021-03-05
+9255,Mallory Page,Groceries,841.71,2025-01-13,Delivered,0.1,Annashire,Cash,2022-11-05
+7839,Stephanie Ferguson,Fashion,50.93,2025-04-14,Cancelled,0.05,Stokeshaven,UPI,2020-11-14
+1414,Anthony Brown,Books,553.12,2023-12-27,Delivered,0.22,West Frances,Wallet,2021-01-15
+2016,Elizabeth Molina,Fashion,45.69,2023-06-28,Returned,0.05,Lisaville,UPI,2023-01-15
+4675,Kristina Young,Groceries,196.28,2025-02-01,Delivered,0.24,Heatherton,Credit Card,2022-01-15
+7349,Richard Jennings,Toys,783.71,2024-08-04,Returned,0.26,North Juliaborough,Credit Card,2023-01-22
+8259,Susan Bush,Electronics,495.96,2024-10-18,Delivered,0.21,Kariside,Credit Card,2022-12-26
+4218,Tracey Phillips,Electronics,223.97,2023-10-18,Delivered,0.04,East Sydneyhaven,Wallet,2020-12-04
+7180,Douglas Baker,Fashion,72.76,2023-10-05,Pending,0.12,Adammouth,Wallet,2021-01-28
+1654,Frank Williams,Books,903.78,2025-05-27,Cancelled,0.03,Tracyshire,Wallet,2022-10-04
+6866,Michael Fox,Groceries,285.92,2023-10-23,Cancelled,0.26,Port Williamchester,Credit Card,2022-09-23
+9798,Gregory Ware,Fashion,469.97,2024-10-30,Pending,0.27,Markport,UPI,2021-05-07
+8780,Samantha Zavala MD,Fashion,814.39,2024-11-03,Cancelled,0.23,Seanbury,Cash,2020-08-02
+6258,Robert Wilson,Books,58.63,2023-12-19,Pending,0.06,Angelhaven,UPI,2022-01-05
+9426,Jill Williams,Groceries,64.03,2025-04-30,Returned,0.2,West Willie,Wallet,2020-10-29
+3742,Patricia Ferguson,Toys,807.0,2024-10-01,Delivered,0.21,East Ellenborough,Cash,2023-05-02
+7950,Christine Poole,Books,249.66,2025-04-15,Delivered,0.21,Lucasland,Cash,2023-05-03
+3519,Mitchell Johnson,Groceries,334.8,2023-07-29,Cancelled,0.24,East Lauraside,Credit Card,2020-09-19
+4729,Jennifer Hayes,Books,409.73,2024-04-12,Delivered,0.17,Stewartfurt,Credit Card,2023-04-13
+2938,Margaret Montgomery,Books,664.8,2025-01-10,Delivered,0.28,Lake Melaniestad,Wallet,2022-07-23
+2738,Michael Obrien,Books,860.85,2024-01-07,Pending,0.2,Jamestown,UPI,2022-06-08
+3561,Brandy Myers,Books,729.04,2025-02-11,Pending,0.12,Susanberg,UPI,2021-09-08
+7113,Alexandra Baxter,Electronics,950.84,2023-09-20,Delivered,0.11,North Adamfurt,UPI,2022-09-14
+9970,Elizabeth Goodman,Toys,821.02,2025-05-04,Cancelled,0.29,Jasonhaven,Cash,2021-01-09
+3637,Luis King,Books,863.23,2023-08-31,Returned,0.19,Lake Lauren,UPI,2020-08-25
+9992,Joshua Roberts,Books,960.97,2023-07-25,Pending,0.2,Coreyshire,Wallet,2022-06-28
+6420,Michael Young,Electronics,762.34,2024-01-10,Pending,0.28,East Louismouth,Cash,2021-10-25
+6008,Brittany Knight,Books,903.71,2025-02-19,Pending,0.02,Susanburgh,Cash,2020-06-09
+6131,Daniel Singh,Books,649.22,2024-05-06,Cancelled,0.03,Maryberg,Cash,2023-04-23
+6432,Julie Howard,Groceries,480.06,2024-01-26,Delivered,0.09,Arnoldburgh,UPI,2023-03-01
+2343,Shannon Taylor,Groceries,398.8,2024-07-25,Cancelled,0.12,West Jessica,Cash,2023-01-31
+2252,Stephanie Atkinson,Groceries,684.83,2024-10-05,Pending,0.1,Port Bonniefurt,Cash,2022-12-05
+4485,Kristen Stephens,Toys,424.96,2024-07-26,Cancelled,0.07,Valdezberg,Cash,2021-12-22
+7430,Raymond Quinn,Groceries,655.81,2024-01-15,Delivered,0.0,South Walter,UPI,2020-10-20
+7500,Adam Allen,Fashion,788.13,2025-02-18,Cancelled,0.01,Port Willie,Cash,2022-04-26
+3935,Krystal Brennan,Electronics,804.01,2023-09-24,Returned,0.04,Crosbyton,UPI,2021-05-07
+8989,Dennis Young,Toys,169.91,2024-11-03,Cancelled,0.02,New Rebecca,Credit Card,2021-12-15
+8695,Sierra Williams,Books,79.07,2024-10-18,Returned,0.07,Dakotahaven,Credit Card,2023-02-11
+5480,Deborah Stephens,Electronics,609.75,2023-10-16,Cancelled,0.25,Valdezstad,Cash,2022-12-01
+2275,Jamie Solomon,Groceries,646.72,2024-07-08,Pending,0.19,Gomezstad,UPI,2022-06-28
+8898,Adriana Macias,Toys,352.61,2024-05-09,Delivered,0.11,East Chris,Wallet,2023-02-26
+5600,Cody Cox,Electronics,404.01,2024-12-11,Cancelled,0.02,Lake Jerrymouth,Wallet,2020-11-25
+8889,Karen Garza,Books,998.3,2024-10-17,Cancelled,0.06,Johnsonton,Credit Card,2020-12-17
+3639,Jose Macdonald,Toys,358.5,2023-09-25,Returned,0.14,East Jonathanburgh,Credit Card,2022-08-13
+7642,Kristy Smith,Fashion,581.17,2024-12-12,Delivered,0.27,Staceyborough,Wallet,2022-04-30
+8723,Carolyn Greer,Fashion,113.32,2024-09-11,Cancelled,0.23,Port Brandi,Cash,2021-03-11
+9369,Nathaniel Cooper,Fashion,388.61,2024-05-20,Returned,0.06,East Nicholasberg,Credit Card,2020-11-17
+1271,Scott Gordon,Electronics,60.69,2024-04-24,Cancelled,0.11,New Cole,UPI,2022-06-11
+1639,Kim Goodwin,Electronics,52.43,2023-08-14,Cancelled,0.02,Hopkinsside,Wallet,2020-06-03
+8069,Jacqueline Williams,Electronics,917.55,2024-07-18,Returned,0.2,Perezfort,UPI,2022-01-15
+6742,Natalie Juarez,Groceries,531.55,2024-11-25,Pending,0.01,South Dennisfort,Wallet,2021-05-29
+2373,Shawn Ortiz,Groceries,275.96,2023-10-27,Pending,0.23,Lake Juliatown,Wallet,2022-11-16
+2930,Jaime Harris,Fashion,680.0,2025-02-16,Returned,0.2,Robertville,Cash,2021-01-28
+7980,Dawn Wyatt,Fashion,285.32,2024-04-26,Cancelled,0.06,Cherylfurt,UPI,2021-04-14
+7770,Kristin White,Groceries,792.11,2024-08-10,Returned,0.07,Kingport,UPI,2022-11-16
+6641,Jennifer Taylor,Toys,578.49,2025-04-03,Delivered,0.1,Lake Jerryburgh,Cash,2020-11-04
+4513,Rachel Owen,Electronics,904.97,2024-09-21,Delivered,0.12,East Paultown,Cash,2020-10-21
