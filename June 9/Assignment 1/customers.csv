@@ -1,0 +1,7 @@
+CustomerID,Name,Email,City,SignupDate
+101,Ali,ali@gmail.com,Mumbai,2022-05-10
+102,Neha,neha@yahoo.com,Delhi,2023-01-15
+103,Ravi,ravi@hotmail.com,Bangalore,2021-11-01
+104,Sneha,sneha@outlook.com,Hyderabad,2020-07-22
+105,Amit,amit@gmail.com,Chennai,2023-03-10
+106,Test,amit@gmail.com,,2023-03-10
