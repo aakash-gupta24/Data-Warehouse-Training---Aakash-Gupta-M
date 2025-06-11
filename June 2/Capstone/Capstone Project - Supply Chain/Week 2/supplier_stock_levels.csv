@@ -1,0 +1,42 @@
+item_id,item_name,quantity,reorder_level,supplier_id,total_ordered,estimated_stock
+1,wireless mouse,100,20,1,35.0,65.0
+2,usb-c cable,150,30,2,60.0,90.0
+3,laptop stand,200,50,3,20.0,180.0
+4,keyboard,120,25,4,38.0,82.0
+5,external hard drive,300,75,5,27.0,273.0
+6,monitor 24 inch,400,100,6,42.0,358.0
+7,webcam hd,80,20,7,62.0,18.0
+8,bluetooth speaker,90,15,8,38.0,52.0
+9,gaming headset,250,60,9,27.0,223.0
+10,smartphone case,180,40,10,68.0,112.0
+11,portable charger,210,50,11,32.0,178.0
+12,desk lamp,170,45,12,19.0,151.0
+13,office chair,300,80,13,22.0,278.0
+14,graphic tablet,260,55,14,45.0,215.0
+15,router,130,30,15,30.0,100.0
+16,ssd 1tb,160,40,16,32.0,128.0
+17,mouse pad,110,25,17,31.0,79.0
+18,usb flash drive,190,45,18,27.0,163.0
+19,hdmi cable,140,35,19,35.0,105.0
+20,power strip,220,60,20,22.0,198.0
+21,webcam cover,200,50,21,40.0,160.0
+22,wireless keyboard,100,20,22,20.0,80.0
+23,desk organizer,300,70,23,24.0,276.0
+24,office desk,250,55,24,31.0,219.0
+25,laptop backpack,275,60,25,48.0,227.0
+26,monitor stand,225,45,26,25.0,200.0
+27,phone charger,150,30,27,32.0,118.0
+28,earbuds,180,40,28,14.0,166.0
+29,tablet case,120,25,29,36.0,84.0
+30,usb hub,160,35,30,30.0,130.0
+31,cable clips,130,30,1,35.0,95.0
+32,laptop cooling pad,140,35,2,60.0,80.0
+33,smartwatch,190,50,3,20.0,170.0
+34,desk calendar,200,60,4,38.0,162.0
+35,printer ink,170,40,5,27.0,143.0
+36,phone stand,180,45,6,42.0,138.0
+37,flashlight,150,30,7,62.0,88.0
+38,hdmi splitter,160,35,8,38.0,122.0
+39,tablet stylus,190,50,9,27.0,163.0
+40,usb charger,210,60,10,68.0,142.0
+41,widget a,5,10,1,35.0,-30.0

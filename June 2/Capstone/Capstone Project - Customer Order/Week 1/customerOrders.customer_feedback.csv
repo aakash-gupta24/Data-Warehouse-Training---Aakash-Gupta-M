@@ -1,0 +1,47 @@
+_id,customer_id,order_id,feedback_text,submitted_at
+683d3f79ce82117b9e6c4bd0,1,1,"The headphones were delivered on time, very satisfied.",2025-05-05T10:00:00.000Z
+683d3f79ce82117b9e6c4bd1,1,15,Great delivery experience for the wireless charger.,2025-05-10T14:30:00.000Z
+683d3f79ce82117b9e6c4bd2,2,24,Laptop stand arrived early and in perfect condition.,2025-05-14T09:15:00.000Z
+683d3f79ce82117b9e6c4bd3,3,2,Delivery of the USB-C hub was smooth and quick.,2025-05-21T16:45:00.000Z
+683d3f79ce82117b9e6c4bd4,4,39,Very happy with the delivery service for the mechanical keyboard.,2025-05-22T11:00:00.000Z
+683d3f79ce82117b9e6c4bd5,5,3,Webcam was handled with care.,2025-05-29T11:20:00.000Z
+683d3f79ce82117b9e6c4bd6,6,10,Timely delivery of the gaming mouse and good packaging.,2025-05-30T13:00:00.000Z
+683d3f79ce82117b9e6c4bd7,7,4,"Monitor was delivered as promised, excellent service.",2025-06-01T12:10:00.000Z
+683d3f79ce82117b9e6c4bd8,8,38,Bluetooth speaker arrived safely and on time.,2025-06-02T15:30:00.000Z
+683d3f79ce82117b9e6c4bd9,9,32,Keyboard delivery was punctual and hassle-free.,2025-06-03T10:25:00.000Z
+683d3f79ce82117b9e6c4bda,10,5,Excellent delivery experience with the smart watch.,2025-06-06T09:00:00.000Z
+683d3f79ce82117b9e6c4bdb,11,30,Tablet arrived in perfect condition.,2025-06-07T14:45:00.000Z
+683d3f79ce82117b9e6c4bdc,12,28,Delivery of the fitness tracker exceeded expectations.,2025-06-08T10:15:00.000Z
+683d3f79ce82117b9e6c4bdd,13,50,Great communication throughout the webcam delivery.,2025-06-09T12:00:00.000Z
+683d3f79ce82117b9e6c4bde,14,21,Portable SSD arrived without damage.,2025-06-10T11:10:00.000Z
+683d3f79ce82117b9e6c4bdf,15,8,Very satisfied with the power bank delivery process.,2025-06-11T13:35:00.000Z
+683d3f79ce82117b9e6c4be0,16,33,"Gaming headset delivered on schedule, thank you.",2025-06-12T14:50:00.000Z
+683d3f79ce82117b9e6c4be1,17,31,Prompt delivery of smart LED bulb and courteous service.,2025-06-13T09:30:00.000Z
+683d3f79ce82117b9e6c4be2,18,17,Wireless earbuds arrived earlier than expected.,2025-06-14T10:20:00.000Z
+683d3f79ce82117b9e6c4be3,19,45,Smooth delivery experience with the digital photo frame.,2025-06-15T12:40:00.000Z
+683d3f79ce82117b9e6c4be4,20,7,Gaming controller delivered carefully and on time.,2025-06-16T15:10:00.000Z
+683d3f79ce82117b9e6c4be5,21,11,Very happy with the service for the HDMI cable.,2025-06-17T11:55:00.000Z
+683d3f79ce82117b9e6c4be6,22,12,Delivery was efficient and timely for the portable fan.,2025-06-18T09:45:00.000Z
+683d3f79ce82117b9e6c4be7,23,13,Excellent handling of the desk lamp package.,2025-06-19T14:05:00.000Z
+683d3f79ce82117b9e6c4be8,24,25,Package with phone holder arrived in perfect condition.,2025-06-20T10:30:00.000Z
+683d3f79ce82117b9e6c4be9,25,14,"Great delivery of the webcam mount, will order again.",2025-06-21T12:25:00.000Z
+683d3f79ce82117b9e6c4bea,26,26,Satisfied with quick delivery of the laptop bag.,2025-06-22T13:50:00.000Z
+683d3f79ce82117b9e6c4beb,27,24,Delivery went smoothly without issues for the desk organizer.,2025-06-23T14:10:00.000Z
+683d3f79ce82117b9e6c4bec,28,29,Package with phone charger delivered safely and on time.,2025-06-24T15:20:00.000Z
+683d3f79ce82117b9e6c4bed,29,27,Excellent customer service during delivery of the stylus pen.,2025-06-25T11:40:00.000Z
+683d3f79ce82117b9e6c4bee,30,16,"Fast delivery of the power adapter, very pleased.",2025-06-26T10:50:00.000Z
+683d3f79ce82117b9e6c4bef,31,19,Delivered with care and on schedule for the laptop charger.,2025-06-27T12:15:00.000Z
+683d3f79ce82117b9e6c4bf0,32,44,Order for ethernet cable arrived intact and timely.,2025-06-28T14:00:00.000Z
+683d3f79ce82117b9e6c4bf1,33,18,Very good delivery experience with the phone tripod.,2025-06-29T09:35:00.000Z
+683d3f79ce82117b9e6c4bf2,34,28,Package with smart scale arrived as expected.,2025-06-30T10:45:00.000Z
+683d3f79ce82117b9e6c4bf3,35,35,Timely and professional delivery of the wireless keyboard.,2025-07-01T11:20:00.000Z
+683d3f79ce82117b9e6c4bf4,36,49,Order for webcam lens cover was handled very well.,2025-07-02T13:10:00.000Z
+683d3f79ce82117b9e6c4bf5,37,41,Package of mouse pad delivered without delays.,2025-07-03T14:30:00.000Z
+683d3f79ce82117b9e6c4bf6,38,36,"Quick delivery of surge protector, very happy.",2025-07-04T12:40:00.000Z
+683d3f79ce82117b9e6c4bf7,39,42,Laptop cooling pad arrived on schedule.,2025-07-05T15:00:00.000Z
+683d3f79ce82117b9e6c4bf8,40,43,Very pleased with the delivery of the screen protector.,2025-07-06T11:55:00.000Z
+683d3f79ce82117b9e6c4bf9,41,37,Delivery was quick and hassle-free for the HDMI splitter.,2025-07-07T13:25:00.000Z
+683d3f79ce82117b9e6c4bfa,42,34,Order for USB cable arrived safely and on time.,2025-07-08T14:50:00.000Z
+683d3f79ce82117b9e6c4bfb,43,6,Excellent delivery service for the tablet case.,2025-07-09T12:10:00.000Z
+683d3f79ce82117b9e6c4bfc,44,22,Package was handled with great care – phone cover arrived safe.,2025-07-10T10:30:00.000Z
+683d3f79ce82117b9e6c4bfd,45,23,Delivery of the phone holder went very smoothly.,2025-07-11T15:40:00.000Z
