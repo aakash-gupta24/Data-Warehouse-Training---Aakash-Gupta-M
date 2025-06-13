@@ -18,7 +18,7 @@ import dlt
 from pyspark.sql.functions import col
 @dlt.table
 def rea():
-    spark.conf.set("fs.azure.account.key.hestore.blob.core.windows.net","t9GPzv3EUQuPiAc+xYOGz8ugxHJYyeq+mZwiYW3CowXMCr4j0H0sofY2yXGapzCyksI7PYl/rUDj+ASt2AFRBQ==")
+    spark.conf.set("fs.azure.account.key.hestore.blob.core.windows.net","-----AccessKeyyy----")
     customers_df= spark.read.option("header", True).option("inferSchema", True).csv("wasbs://june13assignment1@hestore.blob.core.windows.net/customers.csv")
     return customers_df
 df=rea()
