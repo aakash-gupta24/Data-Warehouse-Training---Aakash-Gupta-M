@@ -1,0 +1,51 @@
+order_id,current_status,status_date
+1,Delivered,2025-05-06
+2,In Transit,2025-05-07
+3,Delayed,2025-05-08
+4,Cancelled,2025-05-09
+5,Delivered,2025-05-12
+6,In Transit,2025-05-11
+7,Delivered,2025-05-14
+8,Delivered,2025-05-15
+9,In Transit,2025-05-16
+10,Delivered,2025-05-17
+11,Delivered,2025-05-18
+12,Delayed,2025-05-19
+13,In Transit,2025-05-20
+14,Delivered,2025-05-21
+15,Delivered,2025-05-22
+16,Cancelled,2025-05-23
+17,Delivered,2025-05-24
+18,In Transit,2025-05-25
+19,Delivered,2025-05-26
+20,Delivered,2025-05-27
+21,In Transit,2025-05-28
+22,Delivered,2025-05-29
+23,Delayed,2025-05-30
+24,Delivered,2025-05-31
+25,Delivered,2025-06-01
+26,Cancelled,2025-06-02
+27,Delivered,2025-06-03
+28,In Transit,2025-06-04
+29,Delivered,2025-06-05
+30,Delivered,2025-06-06
+31,Delayed,2025-06-07
+32,Delivered,2025-06-08
+33,Delivered,2025-06-09
+34,In Transit,2025-06-10
+35,Delivered,2025-06-11
+36,Cancelled,2025-06-12
+37,Delivered,2025-06-13
+38,In Transit,2025-06-14
+39,Delivered,2025-06-15
+40,Delivered,2025-06-16
+41,In Transit,2025-06-17
+42,Delivered,2025-06-18
+43,Delivered,2025-06-19
+44,Delayed,2025-06-20
+45,Delivered,2025-06-21
+46,In Transit,2025-06-22
+47,Delivered,2025-06-23
+48,Cancelled,2025-06-24
+49,Delivered,2025-06-25
+50,In Transit,2025-06-26
