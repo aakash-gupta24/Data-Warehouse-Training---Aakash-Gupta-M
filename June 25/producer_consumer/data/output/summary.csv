@@ -1,0 +1,4 @@
+file,status,rows
+file1.csv,Valid,3
+/opt/airflow/data/input/file2.csv,Invalid headers,0
+file3.csv,Valid,10
