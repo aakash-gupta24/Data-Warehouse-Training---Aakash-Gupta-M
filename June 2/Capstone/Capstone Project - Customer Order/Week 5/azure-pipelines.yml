@@ -1,0 +1,27 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+    addToPath: true
+
+- script: |
+    python -m pip install --upgrade pip
+  displayName: 'Install pip'
+
+- script: |
+    mkdir -p logs
+    python analysis.py
+  displayName: 'Run Python Analysis Script'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: 'logs/delay_summary.log'
+    artifactName: 'DelayLog'
+    publishLocation: 'Container'
+  displayName: 'Publish Log File'
